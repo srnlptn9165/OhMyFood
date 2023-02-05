@@ -13,8 +13,10 @@
             <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&family=Roboto:ital,wght@0,100;0,300;0,700;1,100&display=swap" rel="stylesheet">
             <link rel="stylesheet" href="./css/normalize.css" /> <!-- pour assurer la cohérence entre les navigateurs -->
             <link rel="stylesheet" href="./css/main.css"/>   <!-- caractéristiques générales communes container card button -->
-            <link rel="stylesheet" href="./css/colors.css"/> <!-- couleurs demandées pour l'exercice -->
+            <link rel="stylesheet" href="./css/colors.css"/> <!-- couleurs demandées pour l'exercice + quelques light  -->
             <link rel="stylesheet" href="./css/font.css"/>   <!-- caractéristiques des polices utilisées / particularités sur liens <a> -->
+            <link rel="stylesheet" href="./css/icon.css"/>   <!-- taille des icon -->                
+            <link rel="stylesheet" href="./css/fonctionnement.css"/> <!-- mise en forme de la section Fonctionnement -->
             <link rel="stylesheet" href="./css/footer.css"/> <!-- mise en forme du pied de page -->
             <link rel="stylesheet" href="./css/media_portable"/> <!-- mise en forme pour mobile first -->
         <title>ohmyfood</title>
@@ -34,21 +36,47 @@
             <h2></h2>
 <!-- LOCATION -->
             <div class="location">
-
+               <p>icon + champ de saisie : Paris, Belleville</p>
             </div>
 <!-- EXPLORATION -->
             <div class="exploration">
-                <h2>Réservez le menu qui vous convient</h2>
+                <h2>Réservez le menu qui vous convient</h2><!--
                 <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+                <p>Bouton : Explorer nos restaurants</p>-->
             </div>
         </section>
-
-
 
 <!-- BLOC2 -->      
 <!-- FONCTIONNEMENT -->
         <section class="fonctionnement">
-            <h2>Fonctionnement</h2>           
+            <h2>Fonctionnement</h2>
+
+            <nav>
+                <ol>
+                    <li class="menu card-rounded ">
+                        <a href="#">
+                            <i class="fa-solid fa-mobile-screen-button icon--x-large"></i>
+                            Choisissez un restaurant
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="menu card-rounded ">
+                        <a href="#">
+                            <i class="fa-solid fa-list-ul icon--x-large"></i>
+                            Composez votre menu
+                        </a>
+                    </li>
+                    
+                    <li class="menu card-rounded ">
+                        <a href="#">
+                            <i class="fa-solid fa-store icon--x-large"></i>
+                            Dégustez au restaurant
+                        </a>
+                    </li>
+                    
+                </ol>
+            </nav>              
         </section>
 
 
@@ -60,6 +88,9 @@
 
 
 <!-- FOOTER -->
+<!-- Le footer est identique sur toutes les pages.-->
+<!-- Au clic sur “Contact”, un renvoi vers une adresse mail est effectué.-->
+
         <footer class="footer">
             
             <h2 class="footer__logo">ohmyfood</h2>
