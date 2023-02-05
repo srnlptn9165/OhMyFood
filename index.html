@@ -16,6 +16,7 @@
             <link rel="stylesheet" href="./css/colors.css"/> <!-- couleurs demandées pour l'exercice + quelques light  -->
             <link rel="stylesheet" href="./css/font.css"/>   <!-- caractéristiques des polices utilisées / particularités sur liens <a> -->
             <link rel="stylesheet" href="./css/icon.css"/>   <!-- taille des icon -->                
+            <link rel="stylesheet" href="./css/allexploration.css"/> <!-- mise en forme de la section Location/Exploration -->
             <link rel="stylesheet" href="./css/fonctionnement.css"/> <!-- mise en forme de la section Fonctionnement -->
             <link rel="stylesheet" href="./css/footer.css"/> <!-- mise en forme du pied de page -->
             <link rel="stylesheet" href="./css/media_portable"/> <!-- mise en forme pour mobile first -->
@@ -36,7 +37,12 @@
             <h2></h2>
 <!-- LOCATION -->
             <div class="location">
-               <p>icon + champ de saisie : Paris, Belleville</p>
+                <form class="search" >
+                    <button class="btn-loc" type="submit">
+                        <i class="fa-solid  fa-location-dot icon--large" ></i>
+                    </button>
+                    <input type="text" placeholder="Paris, Belleville" name="search" autocomplete="off">     
+                </form>
             </div>
 <!-- EXPLORATION -->
             <div class="exploration">

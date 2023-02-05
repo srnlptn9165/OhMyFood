@@ -3,6 +3,11 @@
 }
 
 ol {
+    padding: 0;
+    /*border: 2px solid green;*/
+}
+
+ol {
     counter-reset: fonction;                /* On crée une nouvelle instance du
                                               compteur fonction avec chaque ol */
     list-style-type: none;
@@ -23,11 +28,6 @@ ol li::before {
     color: white;
     margin-left: -30px;
   }
-
-ol {
-    padding: 0;/*
-    border: 2px solid green;*/
-}
 
 .menu {
     width: 100%;
