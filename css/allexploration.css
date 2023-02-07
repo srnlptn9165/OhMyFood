@@ -38,13 +38,13 @@ input {                                                                 /* Zone 
     font-weight: bold;
     }
 
-.description {                                                          /* Bloc descriptif fond gris très clair */
+.exploration {                                                          /* Bloc descriptif fond gris très clair */
     background-color: var(--light-grey);
     text-align: center;
     padding: 30px 50px 30px 50px ;
 }
 
-.description h2 {
+.exploration h2 {
     margin-top: 20px;
 }
 
