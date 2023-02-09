@@ -18,6 +18,7 @@
             <link rel="stylesheet" href="./css/icon.css"/>   <!-- taille des icon -->                
             <link rel="stylesheet" href="./css/allexploration.css"/> <!-- mise en forme de la section Location/Exploration -->
             <link rel="stylesheet" href="./css/fonctionnement.css"/> <!-- mise en forme de la section Fonctionnement -->
+            <link rel="stylesheet" href="./css/card.css"/> <!-- mise en forme des cartes, images et bloc légende -->
             <link rel="stylesheet" href="./css/footer.css"/> <!-- mise en forme du pied de page -->
             <link rel="stylesheet" href="./css/media_portable"/> <!-- mise en forme pour mobile first -->
         <title>ohmyfood</title>
@@ -58,7 +59,7 @@
 
             <nav>
                 <ol>
-                    <li class="menu card-rounded ">
+                    <li class="menu rounded-card ">
                         <a href="#">
                             <i class="fa-solid fa-mobile-screen-button icon--x-large"></i>
                             Choisissez un restaurant
@@ -66,14 +67,14 @@
                     </li>
                     
                     
-                    <li class="menu card-rounded ">
+                    <li class="menu rounded-card ">
                         <a href="#">
                             <i class="fa-solid fa-list-ul icon--x-large"></i>
                             Composez votre menu
                         </a>
                     </li>
                     
-                    <li class="menu card-rounded ">
+                    <li class="menu rounded-card ">
                         <a href="#">
                             <i class="fa-solid fa-store icon--x-large"></i>
                             Dégustez au restaurant
@@ -87,10 +88,127 @@
 
 <!-- BLOC 3 -->
 <!-- RESTAURANTS -->
-        <section class="restaurants">
+        <section class="restaurants">   <!-- css  -->
             <h2>Restaurants</h2>
+            <div class="restaurants__cards"> 
+                <article class="card-restau rounded-card">
+                    <picture class="card-restau__picture">
+                        <img class="rounded-top-left rounded-top-right card-restau__img" src="./images/LaPaletteDuGout.jpg" alt="La palette du goût"   title="La palette du goût" >
+                    </picture>
+                </article>
+                <div class="card-restau__place"> <!--  css -->
+                    <p class="card-restau__label font--15b">La palette du goût</p> <!--  css -->
+                    <p class="card-restau__loc font--15">Ménilmontant</p><!--  css -->
+                </div>
+                <div class="card-restau__heart"><!--  css -->
+                    <i class="fa-regular fa-heart icon--x-large"></i><!--  css -->
+                </div>
+            </div>
+
+            <div class="restaurants__cards"> 
+                <article class="card-restau rounded-card">
+                    <picture class="card-restau__picture">
+                        <img class="rounded-top-left rounded-top-right card-restau__img" src="./images/LaNoteEnchantee.jpg" alt="La note enchantée"   title="La note enchantée" >
+                    </picture>
+                </article>
+                <div class="card-restau__place"> <!--  css -->
+                    <p class="card-restau__label font--15b">La note enchantée</p> <!--  css -->
+                    <p class="card-restau__loc font--15">Charonne</p><!--  css -->
+                </div>
+                <div class="card-restau__heart"><!--  css -->
+                    <i class="fa-regular fa-heart icon--x-large"></i><!--  css -->
+                </div>
+            </div>
+
+        </section>
+    
+<!-- 
+        class="restaurants">
+            <h2>Restaurants</h2>
+            <div class="restaurants__cards">
+
+                <a href="./restaurant/restaurant1.html">
+                    <article class="card-restau rounded-card">
+                        <picture class="card-restau__picture">
+                            <img class="rounded-top-left rounded-top-right card-restau__img" src="./images/restaurants/PaletteDuGout.jpg" alt="La palette du goût"   title="La palette du goût" >
+                            <span class="new">Nouveau</span>
+                        </picture>
+                        <div class="card-restau__place">
+                            <p class="card-restau__label rnl_font--15b">La palette du goût</p>
+                            <p class="card-restau__loc rnl_font--15">Ménilmontant</p>
+                        </div>
+                        <form>
+                            <div class="card-restau__heart">
+                                <label class="container">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <input type="checkbox" id="heart" >
+                                <label for="heart" class="far icon--x-large"></label>
+                                <i class="fa-regular fa-heart icon--x-large"></i>
+                                <i class="fa-solid fa-heart icon--x-large"></i>
+                            </div>
+                        </form>
+                    </article>
+                </a>
+            -->
+            <!--
+            
+                <a href="./restaurant/restaurant2.html">
+                    <article class="card-restau rounded-card">
+                        <picture class="card-restau__picture">
+                            <img class="rounded-top-left rounded-top-right card-restau__img" src="./images/restaurants/NoteEnchantee.jpg" alt="La note enchantée"   title="La note enchantée" >
+                            <span class="new">Nouveau         </span>
+                        </picture>
+                        <div class="card-restau__place">
+                            <p class="card-restau__label rnl_font--15b">La note enchantée</p>
+                            <p class="card-restau__loc rnl_font--15">Charonne</p>
+                        </div>
+                        <div class="card-restau__heart">
+                            <i class="fa-regular fa-heart icon--x-large"></i>
+                            <i class="fa-solid fa-heart icon--x-large"></i>
+                        </div>
+                    </article>
+                </a>
+            -->
+            <!--
+            
+                <a href="./restaurant/restaurant3.html">
+                    <article class="card-restau rounded-card">
+                        <picture class="card-restau__picture">
+                            <img class="rounded-top-left rounded-top-right card-restau__img" src="./images/restaurants/ALaFrancaise.jpg" alt="A la française"   title="A la française" >
+                        </picture>
+                        <div class="card-restau__place">
+                            <p class="card-restau__label rnl_font--15b">A la française</p>
+                            <p class="card-restau__loc rnl_font--15">Cité Rouge</p>
+                        </div>
+                        <div class="card-restau__heart">
+                            <i class="fa-regular fa-heart icon--x-large"></i>
+                            <i class="plein fa-solid fa-heart icon--x-large"></i>
+                        </div>
+                    </article>
+                </a>
+            -->
+            <!--
+                <a href="./restaurant/restaurant4.html">
+                    <article class="card-restau rounded-card">
+                        <picture class="card-restau__picture">
+                            <img class="rounded-top-left rounded-top-right card-restau__img" src="./images/restaurants/LeDeliceDesSens.jpg" alt="Le délice des sens"   title="Le délice des sens" >
+                        </picture>
+                        <div class="card-restau__place">
+                            <p class="card-restau__label rnl_font--15b">Le délice des sens</p>
+                            <p class="card-restau__loc rnl_font--15">Folie Méricourt</p>
+                        </div>
+                        <div class="card-restau__heart">
+                            <i class="fa-regular fa-heart icon--x-large"></i>
+                            <i class="fa-solid fa-heart icon--x-large"></i>
+                        </div>
+                    </article>
+                </a>
+            </div>
         </section>
 
+    -->
 
 <!-- FOOTER -->
 <!-- Le footer est identique sur toutes les pages.-->
