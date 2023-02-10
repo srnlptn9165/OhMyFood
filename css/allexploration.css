@@ -55,7 +55,17 @@ input {                                                                 /* Zone 
     padding: 15px 20px;
     margin: 20px 0 ;
     border: none;
+    box-shadow: 8px 8px 2px var(--grey);
     cursor:pointer;
+}
+
+/* ================================================================== */ 
+/* -----  changement au survol -----   */
+/* ================================================================== */ 
+
+.btn:hover {
+    background: linear-gradient(170deg, var(--secondary), var(--primary)) 0%;
+    box-shadow: 8px 8px 2px var(--dark-grey);
 }
 
 /* ============================================== */

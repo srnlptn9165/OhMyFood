@@ -51,7 +51,6 @@ li i {
 /* -----  changement au survol -----   */
 /* ================================================================== */ 
 
-
 .fonctionnement i:hover {
     color:var(--primary);
 }
