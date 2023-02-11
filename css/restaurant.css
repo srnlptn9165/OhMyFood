@@ -38,3 +38,90 @@ img.restau-img {
     object-fit: cover;
 }
 /*--------------------------------------*/
+.restau__menu { 
+    /* Bloc main de la page nom/coeur + articles menu + btn cde*/
+    background-color: var(--light-grey);
+    position:relative;
+    top: -30px;
+}
+
+.reference {
+    /* Bloc nom restau + coeur */
+    padding-left: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin-top:10px;
+}
+
+.reference .fa-heart {
+    /* coeur page restaurant */
+    padding:20px;
+}
+
+.deroule {
+    margin: top 30px;
+    padding-left:10px;
+    margin-bottom:20px;/*
+    border:1px solid red;*/
+}
+
+.deroule span {
+    /* souligne 4 caractères début article menu */
+    padding-bottom :3px;
+    border-bottom :3px solid var(--tertiary);
+
+}
+
+.article--menu {                                                       /* Bloc Article menus */
+    display: flex;
+    flex-direction: column;
+    }
+
+.deroule h3 {
+    padding: 0;
+    margin: 0;
+}
+
+.deroule p {
+    padding: 0;
+    margin: 0;
+}
+
+.deroule {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-menu {               /* label + commentaire + prix */
+    background-color: white;                                   
+    border-radius : 20px;
+    display: flex;
+    flex-direction: row;
+    margin:  6px 10px ;
+    height: 60px;
+}
+
+.card-menu__boxtext{
+    margin: auto;
+}
+
+.card-menu__label {     /* label du plat */
+    padding : 5px 0 5px 20px;
+    margin: 0;
+}
+
+.card-menu__commentaire {  /* commentaire du plat */
+    padding-left: 20px;
+    margin: 0;
+}
+
+.card-menu__boxprix{
+    display: flex;   
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 10px;
+}
+
+.card-menu__prix {   /* prix du plat */
+    margin: 0;
+ }

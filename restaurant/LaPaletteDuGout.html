@@ -39,37 +39,43 @@
     </header>
 
 <!-- PHOTO ACCUEIL -->
-    <div>
+    <div >
         <picture class="restau__picture">
             <img class="restau-img" src="../images/LaPaletteDuGout.jpg" alt="Palette du goût" title="Palette du goût" >
         </picture>
     </div>
 
-<!-- PARTIE PRINCIPALE -->
-<main>
-<!-- ...........ENTREES................ -->
-    <section class="menu__part"><!-- ENTREES / PLATS / DESSERTS -->
-        <div class="menu__part-titre"> <!-- Titre en Majuscule avec accent, avec accent, et souligné sur les 4 premiers caractères -->
-            Entrées
+<!-- PARTIE PRINCIPALE de la page : titre + bloc choix menu + commander -->
+    <main class="restau__menu rounded-top-left rounded-top-right">
+        <div class="reference">
+            <h2><span class="capitalize">la</span> palette du goût</h2>
+            <i class="fa-regular fa-heart icon--xx-large"></i>
         </div>
-        <div class="menu__choix"><!-- Libellé+commentaire+Prix+icon validé -->
-            <div class="menu__choix-texte"><!-- Libellé en gras + commentaire -->
-                Fricassée d'escargots
-                Au piment d'Espelette
-            </div>
-            <div class="menu__choix-prix">
-                25€
-            </div>
+    <!-- ...........ENTREES................ -->
+        <div class="menus">
+            <article class="flex-container article--menu"><!-- ENTREES / PLATS / DESSERTS -->
+                <div class="deroule"> <!-- Titre en Majuscule avec accent, avec accent, et souligné sur les 4 premiers caractères -->
+                    <h3 class="uppercase font--15"><span class="trait">entr</span>ées</h3>
+                </div>
+                <div class="card-menu"><!-- Libellé+commentaire+Prix+icon validé -->
+                    <div class="eighty-container card-menu__boxtext"><!-- Libellé en gras + commentaire -->
+                        <p class="card-menu__label font--15b">Fricassée d'escargots</p>
+                        <p class="card-menu__commentaire font--13">Au piment d'Espelette</p>
+                    </div>
+                    <div class="twenty-container card-menu__boxprix">
+                        <p class="card-menu__prix font--15b">25€</p>
+                    </div>
+                </div>
+            </article>
+    <!-- ...........FIN ENTREES................ -->
+
+    <!-- ...........PLATS................ -->
+    <!-- ...........FIN PLATS................ -->  
+
+    <!-- ...........DESSERTS........................ -->  
+    <!-- ...........FIN DESSERTS........................ --> 
         </div>
-    </section>
-<!-- ...........FIN ENTREES................ -->
-
-<!-- ...........PLATS................ -->
-<!-- ...........FIN PLATS................ -->  
-
-<!-- ...........DESSERTS........................ -->  
-<!-- ...........FIN DESSERTS........................ --> 
-</main>
+    </main>
 
 
     
