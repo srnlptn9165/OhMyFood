@@ -64,4 +64,6 @@
 
 .card-restau__heart .fa-heart:hover {
     color: var(--secondary);
+    font-weight: 900;
+   
 }
