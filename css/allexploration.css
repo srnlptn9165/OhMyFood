@@ -1,8 +1,12 @@
+/* --- Header */
+.header{
+    box-shadow: 0px 9px 0px #ababab;
+}
 /*  -----------   Localisation  ------------------      */
 
 .location {
-    background-color: var(--grey);                                /* bandeau gris pour la localisation */
-    box-shadow: 0px -2px 9px var(--dark-grey);
+    background-color: var(--grey);                                /* bandeau gris pour la localisation *//*
+    box-shadow: 0px -2px 9px var(--dark-grey);*/
 }
 
 .search {                                                               /* positionnement de l'icon + input loc */

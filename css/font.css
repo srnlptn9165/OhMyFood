@@ -13,11 +13,13 @@ body {
 /* ================================================================== */
 
 h1 {
-    margin: 30px 30px 10px 30px;
+    margin: 10px 0px 10px 0px;
+    padding: 0px 0px 10px 0px;
     font-family: var(--logo);  
     text-align: center;
     font-size: 30px;
-    color:black;
+    color:black;/*
+    border: solid 1px red;*/
 }
  
 h2 {
