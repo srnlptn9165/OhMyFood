@@ -55,11 +55,15 @@ li i {
     color:var(--primary);
 }
 
-.menu:hover {
+.menu:hover { /* zone : changement de couleur du fond */
     font-weight: bold;
     background-color: var(--light-secondary);
 }
 
-nav a:hover {
+nav i:hover {   /* bloc lien icone + texte : changement de couleur du texte */
     color: var(--primary);
+}
+
+nav p:hover {
+    color: black;
 }
