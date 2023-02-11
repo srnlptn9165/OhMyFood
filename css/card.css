@@ -29,6 +29,17 @@
     border: 2px solid rgb(255, 0, 255);*/
 }
 
+.new {
+    position        : absolute;
+    top             : 20px;
+    right           : 30px;
+    height          : 30px;
+    font-weight     : bold;
+    padding         : 10px;
+    background-color: var(--tertiary);
+    color           : var(--dark-tertiary);
+}
+
 .card-restau__place {                                    /* bloc comprenant le label + le lieu */
     display: grid;
     grid-area:2/1/5/2;/*
