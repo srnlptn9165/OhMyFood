@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="FR">
+    <head>
+        <meta charset="UTF-8">               
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- viewport -- si user-scalable=no => impossibilite de zoomer -->
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+                <!-- fichiers css du plus generique au plus specifique -->
+                <!-- Polices : Logo et titres: Shrikhand / Texte: Roboto -->
+            <script src="https://kit.fontawesome.com/ed96684d5d.js" crossorigin="anonymous"></script> <!-- pour utilisation des icons -->
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&family=Shrikhand&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&family=Roboto:ital,wght@0,100;0,300;0,700;1,100&display=swap" rel="stylesheet">
+            <link rel="stylesheet" href="../css/normalize.css" /> <!-- pour assurer la cohérence entre les navigateurs -->
+            <link rel="stylesheet" href="../css/main.css"/>   <!-- caractéristiques générales communes container card button -->
+            <link rel="stylesheet" href="../css/colors.css"/> <!-- couleurs demandées pour l'exercice + quelques light  -->
+            <link rel="stylesheet" href="../css/font.css"/>   <!-- caractéristiques des polices utilisées / particularités sur liens <a> -->
+            <link rel="stylesheet" href="../css/icon.css"/>   <!-- taille des icon -->                
+            <link rel="stylesheet" href="../css/allexploration.css"/> <!-- mise en forme de la section Location/Exploration -->
+            <link rel="stylesheet" href="../css/fonctionnement.css"/> <!-- mise en forme de la section Fonctionnement -->
+            <link rel="stylesheet" href="../css/card.css"/> <!-- mise en forme des cartes, images et bloc légende -->
+            <link rel="stylesheet" href="../css/restaurant.css"/> <!-- Mise en forme pages Restaurant -->
+
+            <link rel="stylesheet" href="../css/footer.css"/> <!-- mise en forme du pied de page -->
+            <link rel="stylesheet" href="../css/media_portable"/> <!-- mise en forme pour mobile first -->
+        <title>LaPaletteDuGout</title>
+    </head>
+
+    <body>
+
+<!-- ENTETE avec photo accueil -->
+    <header class="header--menu">
+        <a class="header__a" href="../index.html">
+            <i class="fa-solid fa-arrow-left"></i>
+        </a>
+        <h1 class="header__logo">
+            ohmyfood
+        </h1>      
+    </header>
+
+<!-- PHOTO ACCUEIL -->
+    <div>
+        <picture class="restau__picture">
+            <img class="restau-img" src="../images/LaPaletteDuGout.jpg" alt="Palette du goût" title="Palette du goût" >
+        </picture>
+    </div>
+
+<!-- PARTIE PRINCIPALE -->
+<main>
+<!-- ...........ENTREES................ -->
+    <section class="menu__part"><!-- ENTREES / PLATS / DESSERTS -->
+        <div class="menu__part-titre"> <!-- Titre en Majuscule avec accent, avec accent, et souligné sur les 4 premiers caractères -->
+            Entrées
+        </div>
+        <div class="menu__choix"><!-- Libellé+commentaire+Prix+icon validé -->
+            <div class="menu__choix-texte"><!-- Libellé en gras + commentaire -->
+                Fricassée d'escargots
+                Au piment d'Espelette
+            </div>
+            <div class="menu__choix-prix">
+                25€
+            </div>
+        </div>
+    </section>
+<!-- ...........FIN ENTREES................ -->
+
+<!-- ...........PLATS................ -->
+<!-- ...........FIN PLATS................ -->  
+
+<!-- ...........DESSERTS........................ -->  
+<!-- ...........FIN DESSERTS........................ --> 
+</main>
+
+
+    
+
+<!-- FOOTER -->
+<!-- Le footer est identique sur toutes les pages.-->
+<!-- Au clic sur “Contact”, un renvoi vers une adresse mail est effectué.-->
+
+        <footer class="footer">
+            
+            <h2 class="footer__logo">ohmyfood</h2>
+            <div class="footer__liens" >
+
+                <i class="fa-solid fa-utensils"></i>
+                <a class="lien--prop" href="#">Proposer un restaurant</a>
+                <i class="fa-solid fa-handshake-angle"></i>
+                <a class="lien--part" href="#">Devenir partenaire</a>
+                <a class="lien--mp" href="#">Mentions légales</a>
+                <a class="lien--mail" href="mailto:rnlsophie@gmail.com">Contact</a>
+            
+            </div>       
+        </footer>
+
+    </body>
+</html>
