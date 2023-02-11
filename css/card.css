@@ -11,9 +11,11 @@
     background-color: white;                        /* bloc carte restaurant (image + texte + coeur) */
     display: grid;
     grid-template-columns: 1fr repeat(3, 20px);
-    grid-template-rows: 1fr repeat(3, 20px);/*
+    grid-template-rows: 1fr repeat(3, 20px);
+    box-shadow: 8px 8px 4px var(--grey);/*
     border: 2px dashed rgb(255, 0, 0);*/
 }
+
 
 .card-restau__picture {    
     position: relative;
@@ -46,7 +48,6 @@
     background-color:  rgb(255, 42, 0);*/
 }
 
-
 .card-restau__heart {                                   /* bloc comprenant le coeur */
     display: grid;
     grid-area:3/3/4/4;/*
@@ -72,9 +73,15 @@
 .card-restau__heart .fa-heart {
     color: black;
 }
+.card-restau:hover{
+    box-shadow: 8px 8px 4px rgb(239, 235, 235);
+}
+.restaurants__cards a:hover .card-restau__place {
+    color : black;
+}
 
-.card-restau__heart .fa-heart:hover {
-    color: var(--secondary);
+.fa-heart:hover {
+    color: linear-gradient(var(--secondary), var(--primary));
     font-weight: 900;
-   
+   color:brown;
 }

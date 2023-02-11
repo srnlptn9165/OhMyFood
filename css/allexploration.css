@@ -69,7 +69,9 @@ input {                                                                 /* Zone 
 
 .btn:hover {
     background: linear-gradient(170deg, var(--secondary), var(--primary)) 0%;
-    box-shadow: 8px 8px 2px var(--dark-grey);
+    filter: brightness(120%);
+    box-shadow: 8px 8px 2px #ababab;
+    box-shadow: 8px 8px 2px grey;
 }
 
 /* ============================================== */

@@ -51,19 +51,12 @@ li i {
 /* -----  changement au survol -----   */
 /* ================================================================== */ 
 
-.fonctionnement i:hover {
-    color:var(--primary);
-}
 
 .menu:hover { /* zone : changement de couleur du fond */
     font-weight: bold;
     background-color: var(--light-secondary);
 }
 
-nav i:hover {   /* bloc lien icone + texte : changement de couleur du texte */
-    color: var(--primary);
-}
-
-nav p:hover {
-    color: black;
+.menu:hover .menu-icon {
+    color:var(--primary);
 }

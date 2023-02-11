@@ -93,9 +93,9 @@ a {
     text-decoration: none;/* souligné du lien */
     color: black;
 }
-
+/*
 a:hover {
     color: var(--primary);
-}
+}*/
 
 

@@ -15,7 +15,7 @@ footer a:hover {
 
 .footer__logo {
     font-family: var(--logo);
-    font-size: 16px;
+    font-size: 22px;
     font-weight: 100;
     padding-bottom: 20px;
 }
