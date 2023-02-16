@@ -85,6 +85,7 @@ a .card-restau:hover{
     font-weight: 900;
     background: radial-gradient(circle at 33% 100%, var(--secondary) , var(--primary) );
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: 600ms ease-in-out;
 }
