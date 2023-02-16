@@ -17,9 +17,9 @@
     transition: filter 0.5s ease-in-out;
 }
 
-a .card-restau:hover{
-    box-shadow :8px 8px 4px rgb(107, 103, 103);
-    filter : brightness(110%);
+a .card-restau:hover{                                 
+    box-shadow :8px 8px 4px rgb(107, 103, 103);/* ajout d'une ombre au survol de la carte */
+    filter : brightness(120%);/* ajout d'une plus grande luminosité au survol de la carte */
 }
 
 .card-restau__picture {    
@@ -75,18 +75,20 @@ a .card-restau:hover{
 /* ------------------ Coeur ------------------- */
 /* ============================================== */
 
+
 .card-restau__heart .fa-heart {
     color: black;
 }
-.card-restau:hover{
-    box-shadow: 8px 8px 4px rgb(239, 235, 235);
-}
-.restaurants__cards a:hover .card-restau__place {
-    color : black;
+
+
+.favorite:hover {
+    font-weight: 900;
+    background: radial-gradient(circle at 33% 100%, var(--secondary) , var(--primary) );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 600ms ease-in-out;
 }
 
-.fa-heart:hover {
-    color: linear-gradient(var(--secondary), var(--primary));
-    font-weight: 900;
-   color:brown;
+.restaurants__cards a:hover .card-restau__place {
+    color : black;
 }
