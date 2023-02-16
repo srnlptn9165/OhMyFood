@@ -125,3 +125,22 @@ img.restau-img {
 .card-menu__prix {   /* prix du plat */
     margin: 0;
  }
+ /* ---------------------------------------- */
+ .box_restau-btn {              /* positionnement du bouton "commander" */
+    position: relative;
+    height: 120px;
+ }
+
+ .restau-btn {
+    position: absolute;
+    top:30px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+ }
+
+/* ---------------------------------------- */
+ .footer--menu {              /* positionnement du footer */
+     position   : relative;
+     height: 230px;
+     top: -30px;
+ }
