@@ -61,7 +61,7 @@ img.restau-img {
 .deroule {
     margin: top 30px;
     padding-left:10px;
-    margin-bottom:20px;/*
+    margin: 20px 0px 10px 0px;/*
     border:1px solid red;*/
 }
 
@@ -108,11 +108,15 @@ img.restau-img {
 .card-menu__label {     /* label du plat */
     padding : 5px 0 5px 20px;
     margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .card-menu__commentaire {  /* commentaire du plat */
     padding-left: 20px;
     margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .card-menu__boxprix{
