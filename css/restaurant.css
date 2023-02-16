@@ -148,3 +148,10 @@ img.restau-img {
      height: 230px;
      top: -30px;
  }
+ 
+/* ---------------------------------------- */
+.footer--menu {              /* positionnement du footer */
+    position   : relative;
+    height: 230px;
+    top: -30px;
+}
