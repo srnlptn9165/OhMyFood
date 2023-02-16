@@ -5,44 +5,182 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- viewport -- si user-scalable=no => impossibilite de zoomer -->
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
                 <!-- fichiers css du plus generique au plus specifique -->
+                <!-- Polices : Logo et titres: Shrikhand / Texte: Roboto -->
             <script src="https://kit.fontawesome.com/ed96684d5d.js" crossorigin="anonymous"></script> <!-- pour utilisation des icons -->
             <link rel="preconnect" href="https://fonts.googleapis.com">
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
             <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&family=Shrikhand&display=swap" rel="stylesheet">
             <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&family=Roboto:ital,wght@0,100;0,300;0,700;1,100&display=swap" rel="stylesheet">
             <link rel="stylesheet" href="./css/normalize.css" /> <!-- pour assurer la cohérence entre les navigateurs -->
-            <link rel="stylesheet" href="./css/rnl_main.css"/>
-            <link rel="stylesheet" href="./css/rnl_colors.css"/>
-            <link rel="stylesheet" href="./css/rnl_font.css"/>
-            <link rel="stylesheet" href="./css/rnl_icons.css"/>      
-            <link rel="stylesheet" href="./css/rnl_loading.css"/>     
-            <link rel="stylesheet" href="./css/P3_exploration.css"/>
-            <link rel="stylesheet" href="./css/P3_fonctionnement.css"/>
-            <link rel="stylesheet" href="./css/P3_card.css"/>
-            <link rel="stylesheet" href="./css/P3_footer.css"/>
-            <link rel="stylesheet" media="screen and (max-width: 768px)" href="./css/P3_media_portable.css" /> 
+            <link rel="stylesheet" href="./css/main.css"/>   <!-- caractéristiques générales communes container card button -->
+            <link rel="stylesheet" href="./css/colors.css"/> <!-- couleurs demandées pour l'exercice + quelques light  -->
+            <link rel="stylesheet" href="./css/font.css"/>   <!-- caractéristiques des polices utilisées / particularités sur liens <a> -->
+            <link rel="stylesheet" href="./css/icon.css"/>   <!-- taille des icon -->                
+            <link rel="stylesheet" href="./css/allexploration.css"/> <!-- mise en forme de la section Location/Exploration -->
+            <link rel="stylesheet" href="./css/fonctionnement.css"/> <!-- mise en forme de la section Fonctionnement -->
+            <link rel="stylesheet" href="./css/card.css"/> <!-- mise en forme des cartes, images et bloc légende -->
+            <link rel="stylesheet" href="./css/footer.css"/> <!-- mise en forme du pied de page -->
+            <link rel="stylesheet" href="./css/media_portable"/> <!-- mise en forme pour mobile first -->
         <title>ohmyfood</title>
     </head>
 
     <body>
-<!-- LOADING SPINNER -->
-<!-- retour le 04/02/2023-->
-Test
+<!-- reprise le 04/02/2023-->
+<!-- HEADER -->
+        <header class="header">
+            <h1 class="header__logo">
+                ohmyfood
+            </h1>      
+        </header>
 
+<!-- BLOC 1 -->
+        <section class="allexploration">
 <!-- LOCATION -->
-
-
+<!--  Au survol, la couleur de fond des boutons principaux devra légèrement s’éclaircir.
+      L’ombre portée devra également être plus visible.
+-->
+            <div class="location">
+                <form class="search" >
+                    <button class="btn-loc" type="submit">
+                        <i class="fa-solid  fa-location-dot icon--large" ></i>
+                    </button>
+                    <input type="text" placeholder="Paris, Belleville" name="search" autocomplete="off">     
+                </form>
+            </div>
 <!-- EXPLORATION -->
+            <div class="exploration">
+                <h2>Réservez le menu qui vous convient</h2>
+                <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+                <input type="button" value="Explorer nos restaurants" class="rounded-btn btn-exp btn" onclick="">            
+            </div>
+        </section>
 
-
+<!-- BLOC2 -->      
 <!-- FONCTIONNEMENT -->
-      
+        <section class="fonctionnement">
+            <h2>Fonctionnement</h2>
 
+            <nav>
+                <ol>
+                    <li class="menu rounded-card ">
+                        <a href="#">
+                            <i class="fa-solid fa-mobile-screen-button icon--x-large menu-icon"></i>
+                            <span class="menu--text">Choisissez un restaurant</span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="menu rounded-card ">
+                        <a href="#">
+                            <i class="fa-solid fa-list-ul icon--x-large menu-icon"></i>
+                            Composez votre menu
+                        </a>
+                    </li>
+                    
+                    <li class="menu rounded-card ">
+                        <a href="#">
+                            <i class="fa-solid fa-store icon--x-large menu-icon"></i>
+                            Dégustez au restaurant
+                        </a>
+                    </li>
+                    
+                </ol>
+            </nav>              
+        </section>
+
+
+<!-- BLOC 3 -->
 <!-- RESTAURANTS -->
+        <section class="restaurants">   <!-- css  -->
+            <h2>Restaurants</h2>
+            <div class="restaurants__cards"> 
 
+                <a href="./restaurant/LaPaletteDuGout.html">
+                    <article class="card-restau rounded-card">
+                        <picture class="card-restau__picture">
+                            <img class="rounded-top-left rounded-top-right card-restau__img" src="./images/LaPaletteDuGout.jpg" alt="La palette du goût"   title="La palette du goût" >
+                            <span class="new">Nouveau</span>
+                        </picture>
+                        <div class="card-restau__place"> 
+                            <p class="card-restau__label font--15b">La palette du goût</p> <!--  css -->
+                            <p class="card-restau__loc font--15">Ménilmontant</p><!--  css -->
+                        </div>
+                        <div class="card-restau__heart"><!--  css -->
+                            <i class="favorite fa-regular fa-heart icon--x-large "></i><!--  css -->
+                        </div>
+                    </article>
+                </a>
+
+                <a href="./restaurant/LaNoteEnchantee.html">
+                    <article class="card-restau rounded-card">
+                        <picture class="card-restau__picture">
+                            <img class="rounded-top-left rounded-top-right card-restau__img" src="./images/LaNoteEnchantee.jpg" alt="La note enchantée"   title="La note enchantée" >
+                            <span class="new">Nouveau</span>
+                        </picture>
+                    
+                        <div class="card-restau__place"> 
+                            <p class="card-restau__label font--15b">La note enchantée</p> <!--  css -->
+                            <p class="card-restau__loc font--15">Charonne</p><!--  css -->
+                        </div>
+                        <div class="card-restau__heart"><!--  css -->
+                            <i class="favorite fa-regular fa-heart icon--x-large"></i><!--  css -->
+                        </div>
+                    </article>
+                </a>
+                
+                <a href="./restaurant/AlaFrancaise.html">
+                    <article class="card-restau rounded-card">
+                        <picture class="card-restau__picture">
+                            <img class="rounded-top-left rounded-top-right card-restau__img" src="./images/AlaFrancaise.jpg" alt="A la française"   title="A la française" >
+                        </picture>
+                        <div class="card-restau__place"> <!--  css -->
+                            <p class="card-restau__label font--15b">A la française</p> <!--  css -->
+                            <p class="card-restau__loc font--15">Cité Rouge</p><!--  css -->
+                        </div>
+                        <div class="card-restau__heart"><!--  css -->
+                            <i class="favorite fa-regular fa-heart icon--x-large"></i><!--  css -->
+                        </div>
+                    </article>
+                </a>
+
+                <a href="./restaurant/LeDeliceDesSens.html">
+                    <article class="card-restau rounded-card">
+                        <picture class="card-restau__picture">
+                            <img class="rounded-top-left rounded-top-right card-restau__img" src="./images/LeDeliceDesSens.jpg" alt="Le délice des sens"   title="Le délice des sens" >
+                        </picture>
+                    
+                        <div class="card-restau__place"> <!--  css -->
+                            <p class="card-restau__label font--15b">Le délice des sens</p> <!--  css -->
+                            <p class="card-restau__loc font--15">Folie-Méricourt</p><!--  css -->
+                        </div>
+                        <div class="card-restau__heart"><!--  css -->
+                            <i class="favorite fa-regular fa-heart icon--x-large"></i><!--  css -->
+                        </div>
+                    </article>
+                </a>
+            </div>
+
+        </section>
+    
 
 <!-- FOOTER -->
+<!-- Le footer est identique sur toutes les pages.-->
+<!-- Au clic sur “Contact”, un renvoi vers une adresse mail est effectué.-->
 
+        <footer class="footer">
+            
+            <h2 class="footer__logo">ohmyfood</h2>
+            <div class="footer__liens" >
+
+                <i class="fa-solid fa-utensils"></i>
+                <a class="lien--prop" href="#">Proposer un restaurant</a>
+                <i class="fa-solid fa-handshake-angle"></i>
+                <a class="lien--part" href="#">Devenir partenaire</a>
+                <a class="lien--mp" href="#">Mentions légales</a>
+                <a class="lien--mail" href="mailto:rnlsophie@gmail.com">Contact</a>
+            
+            </div>       
+        </footer>
 
     </body>
 </html>

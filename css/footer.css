@@ -1,0 +1,71 @@
+/* Footer - séparation du bloc précédent */
+footer {
+    background-color: var(--dark-grey);
+    padding: 20px ;
+    color: white;
+}
+
+footer a {
+    color: white;
+}
+
+footer a:hover {
+    color: var(--primary);
+}
+
+.footer__logo {
+    font-family: var(--logo);
+    font-size: 22px;
+    font-weight: 100;
+    padding-bottom: 20px;
+}
+
+.footer__liens {
+    color: white;
+    display: grid;
+    grid-template-columns: 40px 500px;
+    grid-template-rows: 30px 30px 30px 30px;
+}
+
+.fa-utensils {
+    display: grid;
+    grid-column-start: 1;
+    grid-row-start: 1;
+}
+
+.lien--prop {
+    display: grid;
+    grid-column-start: 2;
+    grid-row-start: 1;
+}
+
+.fa-handshake-angle {
+    display: grid;
+    grid-column-start: 1;
+    grid-row-start: 2;
+}
+
+.lien--part {
+    display: grid;
+    grid-column-start: 2;
+    grid-row-start: 2;
+    
+}
+.lien--mp {
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+}
+.lien--mail {
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 4;
+}
+
+/*   > 992 px : écran d'ordinateur */
+@media screen and (min-width: 992px)      
+{
+
+}

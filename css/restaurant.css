@@ -1,0 +1,127 @@
+/*--------------------------------------*/
+.header--menu {
+    width: 100%;
+    margin: 0;
+    padding: auto;
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    grid-template-rows: 100%;
+}
+
+.header__a {
+    display: inline-block;
+}
+
+.fa-arrow-left {
+    grid-column: 1;
+    text-align: center;
+    vertical-align: center;
+    margin: 20px 15px 10px 25px;
+}
+
+.header__logo {
+    grid-column: 2;
+    text-align: center;
+}
+/*--------------------------------------*/
+.restau__picture {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    left:0px;
+    z-index:-1;
+}
+
+img.restau-img {
+    width: 100%;
+    height : 250px;
+    object-fit: cover;
+}
+/*--------------------------------------*/
+.restau__menu { 
+    /* Bloc main de la page nom/coeur + articles menu + btn cde*/
+    background-color: var(--light-grey);
+    position:relative;
+    top: -30px;
+}
+
+.reference {
+    /* Bloc nom restau + coeur */
+    padding-left: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin-top:10px;
+}
+
+.reference .fa-heart {
+    /* coeur page restaurant */
+    padding:20px;
+}
+
+.deroule {
+    margin: top 30px;
+    padding-left:10px;
+    margin-bottom:20px;/*
+    border:1px solid red;*/
+}
+
+.deroule span {
+    /* souligne 4 caractères début article menu */
+    padding-bottom :3px;
+    border-bottom :3px solid var(--tertiary);
+
+}
+
+.article--menu {                                                       /* Bloc Article menus */
+    display: flex;
+    flex-direction: column;
+    }
+
+.deroule h3 {
+    padding: 0;
+    margin: 0;
+}
+
+.deroule p {
+    padding: 0;
+    margin: 0;
+}
+
+.deroule {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-menu {               /* label + commentaire + prix */
+    background-color: white;                                   
+    border-radius : 20px;
+    display: flex;
+    flex-direction: row;
+    margin:  6px 10px ;
+    height: 60px;
+}
+
+.card-menu__boxtext{
+    margin: auto;
+}
+
+.card-menu__label {     /* label du plat */
+    padding : 5px 0 5px 20px;
+    margin: 0;
+}
+
+.card-menu__commentaire {  /* commentaire du plat */
+    padding-left: 20px;
+    margin: 0;
+}
+
+.card-menu__boxprix{
+    display: flex;   
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 10px;
+}
+
+.card-menu__prix {   /* prix du plat */
+    margin: 0;
+ }
