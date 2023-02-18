@@ -63,34 +63,49 @@ img.restau-img {
     padding-left:10px;
     margin: 20px 0px 10px 0px;/*
     border:1px solid red;*/
+    display: flex;
+    flex-direction: column;
+}
+.deroule h3 {
+    padding: 0;
+    margin: 0;
 }
 
 .deroule span {
     /* souligne 4 caractères début article menu */
     padding-bottom :3px;
     border-bottom :3px solid var(--tertiary);
-
 }
 
 .article--menu {                                                       /* Bloc Article menus */
     display: flex;
-    flex-direction: column;
+    flex-direction: column;   
+}
+
+@keyframes bloc-appear {
+    from {
+        transform:translateY(-100%);
+        opacity: 0;
     }
-
-.deroule h3 {
-    padding: 0;
-    margin: 0;
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-.deroule p {
-    padding: 0;
-    margin: 0;
+.menus .entree{
+    animation: bloc-appear 2s backwards; 
+}
+.menus .plat {
+    animation: bloc-appear 2s 1s backwards; 
+}
+.menus .dessert{
+    animation: bloc-appear 2s 2s backwards; 
 }
 
-.deroule {
-    display: flex;
-    flex-direction: column;
-}
+
+
+
 
 .card-menu {               /* label + commentaire + prix */
     background-color: white;                                   
@@ -99,10 +114,15 @@ img.restau-img {
     flex-direction: row;
     margin:  6px 10px ;
     height: 60px;
+    overflow:hidden;
+	display:flex;
+	white-space:nowrap;
+    
 }
 
 .card-menu__boxtext{
     margin: auto;
+    overflow: hidden;
 }
 
 .card-menu__label {     /* label du plat */
@@ -129,6 +149,7 @@ img.restau-img {
 .card-menu__prix {   /* prix du plat */
     margin: 0;
  }
+
  /* ---------------------------------------- */
  .box_restau-btn {              /* positionnement du bouton "commander" */
     position: relative;
@@ -155,3 +176,39 @@ img.restau-img {
     height: 230px;
     top: -30px;
 }
+
+
+/* -------------------------------*/
+/*    Survol du prix d'un plat    */
+/* -------------------------------*/
+
+.card-menu__boxprix:hover {   /* Survol du prix d'un plat pour affichage icon check*/
+    color: var(--tertiary);
+    background-color: var(--tertiary);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+ }
+/*    
+.fa-circle-check {
+    color: var(--tertiary);
+}*/
+/*
+.card-menu__boxcheck {
+    width: 0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--tertiary) ;
+    transform: translateX(17vw);
+    transition:all linear 500ms;
+}
+
+.card-menu__boxcheck .icon-rotate {
+    color:white;
+    transform:rotate(0deg);
+    transition: all linear 500ms 300ms;
+}
+
+.fa-circle-check:before {
+    content : "\f058";
+}*/
