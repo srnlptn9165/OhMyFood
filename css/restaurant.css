@@ -103,10 +103,6 @@ img.restau-img {
     animation: bloc-appear 2s 2s backwards; 
 }
 
-
-
-
-
 .card-menu {               /* label + commentaire + prix */
     background-color: white;                                   
     border-radius : 20px;
@@ -117,38 +113,95 @@ img.restau-img {
     overflow:hidden;
 	display:flex;
 	white-space:nowrap;
-    
 }
 
-.card-menu__boxtext{
-    margin: auto;
+.card-menu__boxtext{ /* bloc pour label + commentaire */
+    margin: 0px;
+    display:flex;
+    flex-direction: column;
+    white-space: nowrap;
     overflow: hidden;
+    text-overflow:ellipsis;/*
+    background:pink;
+    color:blue;
+    border:1px solid blue;*/
 }
 
 .card-menu__label {     /* label du plat */
-    padding : 5px 0 5px 20px;
-    margin: 0;
+    padding : 10px 0px 5px 20px;
+    margin: 0px;
+    white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis;
+    text-overflow: ellipsis;/*
+    border: 1px dashed var(--tertiary);*/
 }
 
 .card-menu__commentaire {  /* commentaire du plat */
-    padding-left: 20px;
-    margin: 0;
+    padding : 5px 0px 10px 20px;
+    margin: 0px;
+    white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis;
+    text-overflow: ellipsis;/*
+    border: 1px dashed var(--tertiary);*/
 }
 
-.card-menu__boxprix{
-    display: flex;   
-    justify-content: center;
-    align-items: flex-end;
-    padding-bottom: 10px;
+.card-menu__boxprix{ /* bloc pour l'affichage du prix, puis de l'icon check */
+    display: flex; 
+    flex-direction: row;  
+    cursor: pointer;
+    transition-property: transform;
+    transition-duration: 1s;/*
+    transition-delay: 200ms;*/
+    z-index:1;/*
+    background: red;*/
 }
 
 .card-menu__prix {   /* prix du plat */
-    margin: 0;
+    margin: 0px 0px;
+    padding: 0px 0px 10px 0px;
+    display: flex;
+    flex-direction : row;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    height:100%;
+    cursor: pointer;
+    border:1px solid black;
+    transform:translateX(0vw);
+    transition-property: transform;
+    transition-duration: 1s;/*
+    transition-delay: 500ms;*/
+    z-index:2;/*
+    background-color: yellow;
+    color:blue;*/
  }
+ .card-menu__boxcheck { /* pour le choix du plat */
+    margin: 0px 0px;
+    padding: 0px 0px 10px 0px;
+    display: flex;
+    flex-direction : row;
+    justify-content: center;
+    align-items: flex-end;
+    width : 0%;
+    height: 0%;
+    background-color: var(--tertiary);
+    color: white;    
+    cursor: pointer;
+    transform:translateX(2vw);
+    transition-property: transform;
+    transition-duration: 0.5s;
+    overflow:hidden;
+    z-index:-1;
+}
+
+.card-menu__boxcheck  span {
+    display:inline-block;
+    transition:transform ;
+    transition-duration : 2s;/*
+    transition-delay:2s;/*
+    transition: all linear 500ms 300ms;
+    border : 1px dashed purple;*/
+  }
 
  /* ---------------------------------------- */
  .box_restau-btn {              /* positionnement du bouton "commander" */
@@ -161,13 +214,6 @@ img.restau-img {
     top:30px;
     left: 50%;
     transform: translate(-50%,-50%);
- }
-
-/* ---------------------------------------- */
- .footer--menu {              /* positionnement du footer */
-     position   : relative;
-     height: 230px;
-     top: -30px;
  }
  
 /* ---------------------------------------- */
@@ -182,33 +228,36 @@ img.restau-img {
 /*    Survol du prix d'un plat    */
 /* -------------------------------*/
 
-.card-menu__boxprix:hover {   /* Survol du prix d'un plat pour affichage icon check*/
-    color: var(--tertiary);
-    background-color: var(--tertiary);
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
- }
+.card-menu__prix:hover {  /* Survol du prix d'un plat pour affichage icon check*/
+  width:100%;
+  transform:translateX(-3vw) ;
+  z-index: 2;/*
+  background-color:pink;*/
+}
+
 /*    
 .fa-circle-check {
     color: var(--tertiary);
 }*/
-/*
-.card-menu__boxcheck {
-    width: 0;
-    display:flex;
+
+.card-menu__prix:hover + .card-menu__boxcheck {
+    display:inline-block;
+    width : 150%;
+    height:100%;
+    margin: 0px 0px;
+    padding: 0px 0px 10px 0px;
+    display: flex;
+    flex-direction : row;
     justify-content: center;
-    align-items: center;
-    background-color: var(--tertiary) ;
-    transform: translateX(17vw);
-    transition:all linear 500ms;
-}
-
-.card-menu__boxcheck .icon-rotate {
+    align-items: flex-end;
+    transform:translateX(-1.5vw) ;
+    background-color:var(--tertiary);
+    z-index:2;
+  }
+  
+.card-menu__prix:hover + .card-menu__boxcheck span {
+    font-size : 20px;
+    font-weight : bold;
     color:white;
-    transform:rotate(0deg);
-    transition: all linear 500ms 300ms;
-}
-
-.fa-circle-check:before {
-    content : "\f058";
-}*/
+    transform:rotate(360deg);
+   }
