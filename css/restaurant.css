@@ -148,6 +148,7 @@ img.restau-img {
 .card-menu__boxprix{ /* bloc pour l'affichage du prix, puis de l'icon check */
     display: flex; 
     flex-direction: row;  
+    background-color: var(--tertiary);
     cursor: pointer;
     transition-property: transform;
     transition-duration: 1s;/*
@@ -159,6 +160,7 @@ img.restau-img {
 .card-menu__prix {   /* prix du plat */
     margin: 0px 0px;
     padding: 0px 0px 10px 0px;
+    background-color: white;
     display: flex;
     flex-direction : row;
     justify-content: center;
@@ -235,29 +237,38 @@ img.restau-img {
   background-color:pink;*/
 }
 
-/*    
+
 .fa-circle-check {
     color: var(--tertiary);
-}*/
+}
 
 .card-menu__prix:hover + .card-menu__boxcheck {
     display:inline-block;
     width : 150%;
     height:100%;
     margin: 0px 0px;
-    padding: 0px 0px 10px 0px;
+    padding: 0px 10px 10px 10px;
     display: flex;
     flex-direction : row;
     justify-content: center;
     align-items: flex-end;
-    transform:translateX(-1.5vw) ;
-    background-color:var(--tertiary);
+    transform:translateX(-1.5vw) ;/*
+    background-color:var(--tertiary);*/
     z-index:2;
   }
   
 .card-menu__prix:hover + .card-menu__boxcheck span {
     font-size : 20px;
-    font-weight : bold;
-    color:white;
+    font-weight : bold;/*
+    background-color: white;*/
+    color: var(--tertiary);
+    transform:rotate(360deg);
+   }
+
+   .card-menu__prix:hover + .card-menu__boxcheck i {
+    font-size : 20px;
+    font-weight : bold;/*
+    background-color: white;*/
+    color: var(--tertiary);
     transform:rotate(360deg);
    }
