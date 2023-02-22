@@ -189,7 +189,7 @@ img.restau-img {
     background-color: var(--tertiary);
     color: white;    
     cursor: pointer;
-    transform:translateX(2vw);
+    transform:translateX(3vw);
     transition-property: transform;
     transition-duration: 0.5s;
     overflow:hidden;
@@ -252,15 +252,15 @@ img.restau-img {
     flex-direction : row;
     justify-content: center;
     align-items: flex-end;
-    transform:translateX(-1.5vw) ;/*
+    transform:translateX(-0.8vw) ;/*
     background-color:var(--tertiary);*/
     z-index:2;
   }
   
 .card-menu__prix:hover + .card-menu__boxcheck span {
     font-size : 20px;
-    font-weight : bold;/*
-    background-color: white;*/
+    font-weight : bold;
+    background-color: white;
     color: var(--tertiary);
     transform:rotate(360deg);
    }
