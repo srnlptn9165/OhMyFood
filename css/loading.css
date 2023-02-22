@@ -21,6 +21,7 @@
     z-index: 10;
     /* --------------------------------------------------------- */
     background-color: var(--light-secondary);                    /* couleur du fond ... mettre un dégradé ? */ 
+    background: radial-gradient(circle at 33% 100%, var(--secondary) , var(--primary) );
     animation: hideLoader 5s 1 forwards;
     animation-delay: 2s;
 }
@@ -36,9 +37,9 @@
     left: 50%;
     transform: translate(-50%,-50%);
     /* ---------------------------------------------------------*/
-    width: 70px;                                                  /* design de la bordure */
-    height: 70px;
-    border: var(--tertiary) solid 5px;
+    width: 80px;                                                  /* design de la bordure */
+    height: 80px;
+    border: var(--tertiary) solid 10px;
     border-top-color: var(--primary);
     border-bottom-color: var(--secondary);
     border-radius: 20%;
