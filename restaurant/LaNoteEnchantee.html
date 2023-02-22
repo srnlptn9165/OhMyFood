@@ -1,81 +1,264 @@
 <!DOCTYPE html>
-    <html lang="FR">
-        <head>
-            <meta charset="UTF-8">               
-            <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- viewport -- si user-scalable=no => impossibilite de zoomer -->
-            <meta http-equiv="X-UA-Compatible" content="ie=edge">
-                    <!-- fichiers css du plus generique au plus specifique -->
-                    <!-- Polices : Logo et titres: Shrikhand / Texte: Roboto -->
-                <script src="https://kit.fontawesome.com/ed96684d5d.js" crossorigin="anonymous"></script> <!-- pour utilisation des icons -->
-                <link rel="preconnect" href="https://fonts.googleapis.com">
-                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-                <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&family=Shrikhand&display=swap" rel="stylesheet">
-                <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&family=Roboto:ital,wght@0,100;0,300;0,700;1,100&display=swap" rel="stylesheet">
-                <link rel="stylesheet" href="../css/normalize.css" /> <!-- pour assurer la cohérence entre les navigateurs -->
-                <link rel="stylesheet" href="../css/main.css"/>   <!-- caractéristiques générales communes container card button -->
-                <link rel="stylesheet" href="../css/colors.css"/> <!-- couleurs demandées pour l'exercice + quelques light  -->
-                <link rel="stylesheet" href="../css/font.css"/>   <!-- caractéristiques des polices utilisées / particularités sur liens <a> -->
-                <link rel="stylesheet" href="../css/icon.css"/>   <!-- taille des icon -->                
-                <link rel="stylesheet" href="../css/allexploration.css"/> <!-- mise en forme de la section Location/Exploration -->
-                <link rel="stylesheet" href="../css/fonctionnement.css"/> <!-- mise en forme de la section Fonctionnement -->
-                <link rel="stylesheet" href="../css/card.css"/> <!-- mise en forme des cartes, images et bloc légende -->
-                <link rel="stylesheet" href="../css/restaurant.css"/> <!-- Mise en forme pages Restaurant -->
+<html lang="FR">
+    <head>
+        <meta charset="UTF-8">               
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- viewport -- si user-scalable=no => impossibilite de zoomer -->
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+                <!-- fichiers css du plus generique au plus specifique -->
+                <!-- Polices : Logo et titres: Shrikhand / Texte: Roboto -->
+            <script src="https://kit.fontawesome.com/ed96684d5d.js" crossorigin="anonymous"></script> <!-- pour utilisation des icons -->
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&family=Shrikhand&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&family=Roboto:ital,wght@0,100;0,300;0,700;1,100&display=swap" rel="stylesheet">
+            <link rel="stylesheet" href="../css/normalize.css" /> <!-- pour assurer la cohérence entre les navigateurs -->
+            <link rel="stylesheet" href="../css/main.css"/>   <!-- caractéristiques générales communes container card button -->
+            <link rel="stylesheet" href="../css/colors.css"/> <!-- couleurs demandées pour l'exercice + quelques light  -->
+            <link rel="stylesheet" href="../css/font.css"/>   <!-- caractéristiques des polices utilisées / particularités sur liens <a> -->
+            <link rel="stylesheet" href="../css/icon.css"/>   <!-- taille des icon -->                
+            <link rel="stylesheet" href="../css/allexploration.css"/> <!-- mise en forme de la section Location/Exploration -->
+            <link rel="stylesheet" href="../css/fonctionnement.css"/> <!-- mise en forme de la section Fonctionnement -->
+            <link rel="stylesheet" href="../css/card.css"/> <!-- mise en forme des cartes, images et bloc légende -->
+            <link rel="stylesheet" href="../css/restaurant.css"/> <!-- Mise en forme pages Restaurant -->
 
-                <link rel="stylesheet" href="../css/footer.css"/> <!-- mise en forme du pied de page -->
-                <link rel="stylesheet" href="../css/media_portable"/> <!-- mise en forme pour mobile first -->
-            <title>La Note Enchantée</title>
-        </head>
+            <link rel="stylesheet" href="../css/footer.css"/> <!-- mise en forme du pied de page -->
+            <link rel="stylesheet" href="../css/media_portable"/> <!-- mise en forme pour mobile first -->
+        <title>La note enchantée</title>
+    </head>
 
-        <body>
+    <body>
 
-    <!-- ENTETE avec photo accueil -->
-        <header class="header--menu">
-            <a class="header__a" href="../index.html">
-                <i class="fa-solid fa-arrow-left"></i>
-            </a>
-            <h1 class="header__logo">
-                ohmyfood
-            </h1>      
-        </header>
+<!-- ENTETE avec photo accueil -->
+    <header class="header--menu">
+        <a class="header__a" href="../index.html">
+            <i class="fa-solid fa-arrow-left"></i>
+        </a>
+        <h1 class="header__logo">
+            ohmyfood
+        </h1>      
+    </header>
 
-    <!-- PHOTO ACCUEIL -->
-        <div>
-            <picture class="restau__picture">
-                <img class="restau-img" src="../images/LaNoteEnchantee.jpg" alt="La Note Enchantée" title="La Note Enchantée" >
-            </picture>
+<!-- PHOTO ACCUEIL -->
+    <div >
+        <picture class="restau__picture">
+            <img class="restau-img" src="../images/LaNoteEnchantee.jpg" alt="La note enchantée" title="La note enchantée" >
+        </picture>
+    </div>
+
+<!-- PARTIE PRINCIPALE de la page : titre + bloc choix menu + commander -->
+    <main class="restau__menu rounded-top-left rounded-top-right">
+        <!-- Titre -->
+        <div class="flex-container reference">
+            <h2><span class="capitalize">à</span> la française</h2>
+            <i class="fa-regular fa-heart icon--xx-large"></i>
         </div>
 
-    <!-- PARTIE PRINCIPALE -->
-        <main>
-        <!-- ...........ENTREES................ -->
-            <section class="menu__part"><!-- ENTREES / PLATS / DESSERTS -->
-                <div class="menu__part-titre"> <!-- Titre en Majuscule avec accent, avec accent, et souligné sur les 4 premiers caractères -->
-                    Entrées
+        <div class=" menus">
+<!-- Bloc chox menu -->
+            <article class="flex-container article--menu entree"><!-- ENTREES / PLATS / DESSERTS -->
+<!-- ...........ENTREES................ -->
+                <div class="deroule"> <!-- Titre en Majuscule avec accent, avec accent, et souligné sur les 4 premiers caractères -->
+                    <h3 class="uppercase font--15"><span class="trait">entr</span>ées</h3>
                 </div>
-                <div class="menu__choix"><!-- Libellé+commentaire+Prix+icon validé -->
-                    <div class="menu__choix-texte"><!-- Libellé en gras + commentaire -->
-
+                <div class="card-menu"><!-- Libellé+commentaire+Prix+icon validé -->
+                    <div class="eighty-container card-menu__boxtext"><!-- Libellé en gras + commentaire -->
+                        <p class="card-menu__label font--15b"><span class="capitalize">r</span>avioles de foie gras</p>
+                        <p class="card-menu__commentaire font--13"><span class="capitalize">a</span>ccompagnées de leur crème à la truffe</p>
                     </div>
-                    <div class="menu__choix-prix">
+                    <div class="twenty-container font--15b card-menu__boxprix ">
+                        <div class="font--15b card-menu__prix ">25€</div>
                     
+                <!-- Ajout du code animation pour l'apparition de l'icon choix -->          
+                        <div class="card-menu__boxcheck">
+                            <span class="icon-rotate">
+                                <i class="fa-regular fa-circle-check"></i>
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="card-menu"><!-- Libellé+commentaire+Prix+icon validé -->
+                    <div class="eighty-container card-menu__boxtext"><!-- Libellé en gras + commentaire -->
+                        <p class="card-menu__label font--15b"><span class="capitalize">c</span>aviar osciètre</p>
+                        <p class="card-menu__commentaire font--13"><span class="capitalize">s</span>ur blini à la farine de blé noir</p>
+                    </div>
+                    <div class="twenty-container card-menu__boxprix">
+                        <div class="card-menu__prix font--15b">35€</div>
+                                            
+                <!-- Ajout du code animation pour l'apparition de l'icon choix -->          
+                <div class="card-menu__boxcheck">
+                    <span class="icon-rotate">
+                        <i class="fa-regular fa-circle-check"></i>
+                    </span>
+                </div>
                     </div>
                 </div>
-            </section>
-        <!-- ...........FIN ENTREES................ -->
+                <div class="card-menu"><!-- Libellé+commentaire+Prix+icon validé -->
+                    <div class="eighty-container card-menu__boxtext"><!-- Libellé en gras + commentaire -->
+                        <p class="card-menu__label font--15b"><span class="capitalize">h</span>omard et espuma de ...</p>
+                        <p class="card-menu__commentaire font--13"><span class="capitalize">m</span>arinés aux zestes d'orange</p>
+                    </div>
+                    <div class="twenty-container card-menu__boxprix">
+                        <div class="card-menu__prix font--15b">20€</div>
+                                            
+                <!-- Ajout du code animation pour l'apparition de l'icon choix -->          
+                <div class="card-menu__boxcheck">
+                    <span class="icon-rotate">
+                        <i class="fa-regular fa-circle-check"></i>
+                    </span>
+                </div>
+                    </div>
+                </div>
 
-        <!-- ...........PLATS................ -->
-        <!-- ...........FIN PLATS................ -->  
+                <div class="card-menu"><!-- Libellé+commentaire+Prix+icon validé -->
+                    <div class="eighty-container card-menu__boxtext"><!-- Libellé en gras + commentaire -->
+                        <p class="card-menu__label font--15b"><span class="capitalize">f</span>oie gras de canard cuit entier</p>
+                        <p class="card-menu__commentaire font--13"><span class="capitalize">c</span>onfiture de figue et pain toasté</p>
+                    </div>
+                    <div class="twenty-container card-menu__boxprix">
+                        <div class="card-menu__prix font--15b">35€</div>
+                                            
+                <!-- Ajout du code animation pour l'apparition de l'icon choix -->          
+                <div class="card-menu__boxcheck">
+                    <span class="icon-rotate">
+                        <i class="fa-regular fa-circle-check"></i>
+                    </span>
+                </div>
+                    </div>
+                </div>
+            </article>
+    <!-- ...........FIN ENTREES................ -->
 
-        <!-- ...........DESSERTS........................ -->  
-        <!-- ...........FIN DESSERTS........................ --> 
-        </main>
+    <!-- ...........PLATS................ -->
+            <article class="flex-container article--menu plat"><!-- ENTREES / PLATS / DESSERTS -->
 
-        <!-- FOOTER -->
-        <!-- Le footer est identique sur toutes les pages.-->
-        <!-- Au clic sur “Contact”, un renvoi vers une adresse mail est effectué.-->
+                <div class="deroule"> <!-- Titre en Majuscule avec accent, avec accent, et souligné sur les 4 premiers caractères -->
+                    <h3 class="uppercase font--15"><span class="trait">plat</span>s</h3>
+                </div>
+                <div class="card-menu"><!-- Libellé+commentaire+Prix+icon validé -->
+                    <div class="eighty-container card-menu__boxtext"><!-- Libellé en gras + commentaire -->
+                        <p class="card-menu__label font--15b"><span class="capitalize">n</span>oix de coquilles Saint-Jacques</p>
+                        <p class="card-menu__commentaire font--13"><span class="capitalize">s</span>ur lit de purée de céleri-rave</p>
+                    </div>
+                    <div class="twenty-container card-menu__boxprix">
+                        <div class="card-menu__prix font--15b">40€</div>
+                                            
+                <!-- Ajout du code animation pour l'apparition de l'icon choix -->          
+                <div class="card-menu__boxcheck">
+                    <span class="icon-rotate">
+                        <i class="fa-regular fa-circle-check"></i>
+                    </span>
+                </div>
+                    </div>
+                </div>
+                <div class="card-menu"><!-- Libellé+commentaire+Prix+icon validé -->
+                    <div class="eighty-container card-menu__boxtext"><!-- Libellé en gras + commentaire -->
+                        <p class="card-menu__label font--15b"><span class="capitalize">l</span>angoustine poêlée</p>
+                        <p class="card-menu__commentaire font--13"><span class="capitalize">e</span>t purée de patate douce </p>
+                    </div>
+                    <div class="twenty-container card-menu__boxprix">
+                        <div class="card-menu__prix font--15b">35€</div>
+                                            
+                <!-- Ajout du code animation pour l'apparition de l'icon choix -->          
+                <div class="card-menu__boxcheck">
+                    <span class="icon-rotate">
+                        <i class="fa-regular fa-circle-check"></i>
+                    </span>
+                </div>
+                    </div>
+                </div>
+                <div class="card-menu"><!-- Libellé+commentaire+Prix+icon validé -->
+                    <div class="eighty-container card-menu__boxtext"><!-- Libellé en gras + commentaire -->
+                        <p class="card-menu__label font--15b"><span class="capitalize">m</span>ijoté de queue de boeuf</p>
+                        <p class="card-menu__commentaire font--13"><span class="capitalize">e</span>t riz sauvage aux zestes de citron</p>
+                    </div>
+                    <div class="twenty-container card-menu__boxprix">
+                        <div class="card-menu__prix font--15b">44€</div>
+                                            
+                <!-- Ajout du code animation pour l'apparition de l'icon choix -->          
+                <div class="card-menu__boxcheck">
+                    <span class="icon-rotate">
+                        <i class="fa-regular fa-circle-check"></i>
+                    </span>
+                </div>
+                    </div>
+                </div>
+            </article>
+    <!-- ...........FIN PLATS................ -->  
 
-        <footer class="footer">
-                    
+    <!-- ...........DESSERTS........................ -->  
+            <article class="flex-container article--menu dessert"><!-- ENTREES / PLATS / DESSERTS -->
+
+                <div class="deroule"> <!-- Titre en Majuscule avec accent, avec accent, et souligné sur les 4 premiers caractères -->
+                    <h3 class="uppercase font--15"><span class="trait">dess</span>erts</h3>
+                </div>
+                <div class="card-menu"><!-- Libellé+commentaire+Prix+icon validé -->
+                    <div class="eighty-container card-menu__boxtext"><!-- Libellé en gras + commentaire -->
+                        <p class="card-menu__label font--15b"><span class="capitalize">m</span>acaron noisette et chocolat</p>
+                        <p class="card-menu__commentaire font--13"><span class="capitalize">g</span>lace au caramel brun et sel de Guérande</p>
+                    </div>
+                    <div class="twenty-container card-menu__boxprix">
+                        <div class="card-menu__prix font--15b">18€</div>
+                                            
+                <!-- Ajout du code animation pour l'apparition de l'icon choix -->          
+                <div class="card-menu__boxcheck">
+                    <span class="icon-rotate">
+                        <i class="fa-regular fa-circle-check"></i>
+                    </span>
+                </div>
+                    </div>
+                </div>
+                <div class="card-menu"><!-- Libellé+commentaire+Prix+icon validé -->
+                    <div class="eighty-container card-menu__boxtext"><!-- Libellé en gras + commentaire -->
+                        <p class="card-menu__label font--15b"><span class="capitalize">b</span>aba au rhum revisité</p>
+                        <p class="card-menu__commentaire font--13"><span class="capitalize">a</span>vec son coulis de citron</p>
+                    </div>
+                    <div class="twenty-container card-menu__boxprix">
+                        <div class="card-menu__prix font--15b">22€</div>
+                                            
+                <!-- Ajout du code animation pour l'apparition de l'icon choix -->          
+                <div class="card-menu__boxcheck">
+                    <span class="icon-rotate">
+                        <i class="fa-regular fa-circle-check"></i>
+                    </span>
+                </div>
+                    </div>
+                </div>
+                <div class="card-menu"><!-- Libellé+commentaire+Prix+icon validé -->
+                    <div class="eighty-container card-menu__boxtext"><!-- Libellé en gras + commentaire -->
+                        <p class="card-menu__label font--15b"><span class="capitalize">t</span>arte au citron meringuée</p>
+                        <p class="card-menu__commentaire font--13"><span class="capitalize">d</span>éstructurée</p>
+                    </div>
+                    <div class="twenty-container card-menu__boxprix">
+                        <div class="card-menu__prix font--15b">23€</div>
+                                            
+                <!-- Ajout du code animation pour l'apparition de l'icon choix -->          
+                <div class="card-menu__boxcheck">
+                    <span class="icon-rotate">
+                        <i class="fa-regular fa-circle-check"></i>
+                    </span>
+                </div>
+                    </div>
+                </div>
+            </article>
+<!-- ...........FIN DESSERTS........................ --> 
+ <!-- Bouton commander -->
+            <div class="box_restau-btn ">
+                <input type="button" value="Commander" class="rounded-btn btn-exp restau-btn  btn" onclick="">            
+           
+            </div>
+        </div>
+
+    </main>
+    
+
+<!-- FOOTER -->
+<!-- Le footer est identique sur toutes les pages.-->
+<!-- Au clic sur “Contact”, un renvoi vers une adresse mail est effectué.-->
+
+        <footer class="footer footer--menu">
+            
             <h2 class="footer__logo">ohmyfood</h2>
             <div class="footer__liens" >
 

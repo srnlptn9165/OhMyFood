@@ -17,7 +17,7 @@
     transition: filter 0.5s ease-in-out;
 }
 
-a .card-restau:hover{                                 
+a .card-restau:hover{     /*                            
     box-shadow :8px 8px 4px rgb(107, 103, 103);/* ajout d'une ombre au survol de la carte */
     filter : brightness(120%);/* ajout d'une plus grande luminosité au survol de la carte */
 }
@@ -85,6 +85,7 @@ a .card-restau:hover{
     font-weight: 900;
     background: radial-gradient(circle at 33% 100%, var(--secondary) , var(--primary) );
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: 600ms ease-in-out;
 }
