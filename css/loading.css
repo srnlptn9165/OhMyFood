@@ -101,7 +101,7 @@
     background-color: var(--light-secondary);                    /* couleur du fond ... mettre un dégradé ? */ 
     background: radial-gradient(circle at 33% 100%, var(--secondary) , var(--primary) );
     animation: hideLoader 4s 1 forwards;
-    animation-delay: 2s;
+    animation-delay: 1s;
 }
 
   
