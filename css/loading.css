@@ -8,7 +8,7 @@
     padding: 20px;
     margin:30%;
     margin-top:50%;
-    animation : flip 1s both;
+    animation : flip 2s both;
 }
 
 @keyframes flip {
@@ -43,7 +43,7 @@
     padding-top: 150px;
     margin:30%;
     margin-top:50%;
-    animation: bounceIn .75s 1s both;
+    animation: bounceIn 1.5s 2s both;
 }
 @keyframes bounceIn {
     0%, 20%, 40%, 60%, 80%, 100% {
@@ -78,7 +78,7 @@
     height: 100%;
     background: var(--primary);
     position: relative;
-    animation: mymove 5s infinite;
+    animation: mymove 5s forwards;
   }
   
   @keyframes mymove {
@@ -92,7 +92,7 @@
 .loading                                                            /* animation hide pour cacher la page d'accueil  */
 {
     display: block;
-    position: fixed;
+    position: absolute;
     max-width: 400px;
     width: 100%;
     height: 100%;
@@ -100,12 +100,9 @@
     /* --------------------------------------------------------- */
     background-color: var(--light-secondary);                    /* couleur du fond ... mettre un dégradé ? */ 
     background: radial-gradient(circle at 33% 100%, var(--secondary) , var(--primary) );
-    animation: hideLoader 4s 1 forwards;
+    animation: hideLoader 5s  forwards;
     animation-delay: 1s;
 }
-
-  
-
 /* ------------------------------------------------------------ */
 .loading:after                                                  /* animation spin après le cache */
 {
@@ -123,17 +120,21 @@
     border-top-color: var(--primary);
     border-bottom-color: var(--secondary);
     border-radius: 20%;
-    animation: rotate 1s linear infinite;
+    animation: rotate 5s linear infinite;
 }
+
  
 /* ------------------------------------------------------------ */
-@keyframes hideLoader                                           /* Code de la 1ère animation : cacher (hide) */
-{
+@keyframes hideLoader                                       /* Code de la 1ère animation : cacher (hide) */
+{  
     100%
     {
-        opacity: 0;                                             /* pour ne rien laisser paraître après*/
-        display: none;                                          /* 1 : reste visible en surface, le site n'apparaît pas */                                
-    }                                                           /*0.5 : l'animation reste en fond, sur le site */
+        opacity: 0;                                         /* opacity 0: pour ne rien laisser paraître après*/
+                                                            /* opacity 1 : reste visible en surface, le site n'apparaît pas */
+                                                            /* opacity 0.5 : l'animation reste en fond, sur le site */
+        display: none; 
+        z-index: -1;                                        /* pour supprimer le position:fixed qui bloque l'animation du site web */                                                         
+    }                                                           
 }
     
 /* ------------------------------------------------------------ */
