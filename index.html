@@ -15,19 +15,26 @@
             <link rel="stylesheet" href="./css/main.css"/>   <!-- caractéristiques générales communes container card button -->
             <link rel="stylesheet" href="./css/colors.css"/> <!-- couleurs demandées pour l'exercice + quelques light  -->
             <link rel="stylesheet" href="./css/font.css"/>   <!-- caractéristiques des polices utilisées / particularités sur liens <a> -->
-            <link rel="stylesheet" href="./css/icon.css"/>   <!-- taille des icon -->                
-            <link rel="stylesheet" href="./css/loading.css"/> <!-- mise en place d'un load spinner pour faire patienter --> 
-            <link rel="stylesheet" href="./css/allexploration.css"/> <!-- mise en forme de la section Location/Exploration -->
+            <link rel="stylesheet" href="./css/icon.css"/>   <!-- taille des icon -->                       <link rel="stylesheet" href="./css/allexploration.css"/> <!-- mise en forme de la section Location/Exploration -->
             <link rel="stylesheet" href="./css/fonctionnement.css"/> <!-- mise en forme de la section Fonctionnement -->
             <link rel="stylesheet" href="./css/card.css"/> <!-- mise en forme des cartes, images et bloc légende -->
             <link rel="stylesheet" href="./css/footer.css"/> <!-- mise en forme du pied de page -->
+                 
+            <link rel="stylesheet" href="./css/loading.css"/> <!-- mise en place d'un load spinner pour faire patienter --> 
+
             <link rel="stylesheet" href="./css/media_portable"/> <!-- mise en forme pour mobile first -->
-        <title>ohmyfood</title>
+        <title>ohmyfood-load</title>
     </head>
 
     <body>
-<!-- pour patienter quelques secondes --><!--
-       <span class="loading"><span class="few">few seconds</span></span>-->
+<!-- pour patienter quelques secondes -->
+    <div class="loading">
+       
+       <span class="spin"></span>
+            <span class="moment">ONE MOMENT</span>
+            <span class="please">PLEASE</span>
+        
+    </div>
 <!-- HEADER -->
         <header class="header">
             <h1 class="header__logo">

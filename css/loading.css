@@ -1,20 +1,98 @@
 /* --------------------------------------------------------------- */
-.few                                                               /* texte d'attente */
+.moment                                                              /* texte d'attente */
 {
     display: inline-block;
     color: var(--dark-tertiary);
     text-align: center;
-    font-size:20px;
+    font-size:30px;
     padding: 20px;
-    margin:40%;
+    margin:30%;
     margin-top:50%;
+    animation : flip 2s both;
 }
 
+@keyframes flip {
+    0% {
+    transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
+    animation-timing-function: ease-out;
+    }
+    40% {
+    transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+    animation-timing-function: ease-out;
+    }
+    50% {
+    transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+    animation-timing-function: ease-in;
+    }
+    80% {
+    transform: perspective(400px) scale3d(.95, .95, .95);
+    animation-timing-function: ease-in;
+    }
+    100% {
+    transform: perspective(400px);
+    animation-timing-function: ease-in;
+    }
+    } 
+.please
+{
+    display: inline-block;
+    color: var(--primary);
+    text-align: center;
+    font-size:40px;
+    font-weight : bold;
+    padding-top: 150px;
+    margin:30%;
+    margin-top:50%;
+    animation: bounceIn 1.5s 2s both;
+}
+@keyframes bounceIn {
+    0%, 20%, 40%, 60%, 80%, 100% {
+        transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        }
+        0% {
+        opacity: 0;
+        transform: scale3d(.3, .3, .3);
+        }
+        20% {
+        transform: scale3d(1.1, 1.1, 1.1);
+        }
+        40% {
+        transform: scale3d(.9, .9, .9);
+        }
+        60% {
+        opacity: 1;
+        transform: scale3d(1.03, 1.03, 1.03);
+        }
+        80% {
+        transform: scale3d(.97, .97, .97);
+        }
+        100% {
+        opacity: 1;
+        transform: scale3d(1, 1, 1);
+        }
+}
+
+.spin { /* pour prendre tout l'écran, animation du fond d'écran avec changement de couleurs de la charte*/
+    max-width: 400px;
+    width: 100%;
+    height: 100%;
+    background: var(--primary);
+    position: relative;
+    animation: mymove 5s forwards;
+  }
+  
+  @keyframes mymove {
+    0%   {top: 0px; left: 0px; background: var(--primary);}
+    25%  {top: 0px; left: 00px; background: var(--secondary);}
+    50%  {top: 00px; left: 00px; background: var(--tertiary);}
+    75%  {top: 00px; left: 00px; background: var(--light-secondary);}
+    100% {top: 0px; left: 0px; background: var(--dark-tertiary);}
+  }
 /* --------------------------------------------------------------- */
 .loading                                                            /* animation hide pour cacher la page d'accueil  */
 {
     display: block;
-    position: fixed;
+    position: absolute;
     max-width: 400px;
     width: 100%;
     height: 100%;
@@ -22,10 +100,9 @@
     /* --------------------------------------------------------- */
     background-color: var(--light-secondary);                    /* couleur du fond ... mettre un dégradé ? */ 
     background: radial-gradient(circle at 33% 100%, var(--secondary) , var(--primary) );
-    animation: hideLoader 5s 1 forwards;
-    animation-delay: 2s;
+    animation: hideLoader 5s  forwards;
+    animation-delay: 1s;
 }
-
 /* ------------------------------------------------------------ */
 .loading:after                                                  /* animation spin après le cache */
 {
@@ -37,23 +114,27 @@
     left: 50%;
     transform: translate(-50%,-50%);
     /* ---------------------------------------------------------*/
-    width: 80px;                                                  /* design de la bordure */
-    height: 80px;
-    border: var(--tertiary) solid 10px;
+    width: 110px;                                                  /* design de la bordure */
+    height: 110px;
+    border: var(--tertiary) solid 20px;
     border-top-color: var(--primary);
     border-bottom-color: var(--secondary);
     border-radius: 20%;
-    animation: rotate 1s linear infinite;
+    animation: rotate 5s linear infinite;
 }
+
  
 /* ------------------------------------------------------------ */
-@keyframes hideLoader                                           /* Code de la 1ère animation : cacher (hide) */
-{
+@keyframes hideLoader                                       /* Code de la 1ère animation : cacher (hide) */
+{  
     100%
     {
-        opacity: 0;                                             /* pour ne rien laisser paraître */
-        display: none;
-    }
+        opacity: 0;                                         /* opacity 0: pour ne rien laisser paraître après*/
+                                                            /* opacity 1 : reste visible en surface, le site n'apparaît pas */
+                                                            /* opacity 0.5 : l'animation reste en fond, sur le site */
+        display: none; 
+        z-index: -1;                                        /* pour supprimer le position:fixed qui bloque l'animation du site web */                                                         
+    }                                                           
 }
     
 /* ------------------------------------------------------------ */
