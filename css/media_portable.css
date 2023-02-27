@@ -20,6 +20,6 @@
   }
 
   li a:visited {
-    columns: black;
+    color: black;
   }
 }
