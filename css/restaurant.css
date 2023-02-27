@@ -1,8 +1,7 @@
 /*--------------------------------------*/
 .header--menu {
     width: 100%;
-    margin: 0;
-    padding: auto;
+    margin: 0px;
     display: grid;
     grid-template-columns: 10% 80% 10%;
     grid-template-rows: 100%;
@@ -59,7 +58,7 @@ img.restau-img {
 }
 
 .deroule {
-    margin: top 30px;
+    margin-top : 30px;
     padding-left:10px;
     margin: 20px 0px 10px 0px;/*
     border:1px solid red;*/
