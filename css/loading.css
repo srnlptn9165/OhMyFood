@@ -43,7 +43,7 @@
     padding-top: 150px;
     margin:30%;
     margin-top:50%;
-    animation: bounceIn 1.5s 2s both;
+    animation: bounceIn 0.5s 2s both;
 }
 @keyframes bounceIn {
     0%, 20%, 40%, 60%, 80%, 100% {
