@@ -2,13 +2,11 @@
 .moment                                                             /* texte d'attente */
 {
     display: inline-block;
-    width: 100%;
-    color: var(--dark-tertiary);
+    width: 50%;
+    color: var(--secondary);
     text-align: center;
     font-size:30px;
     padding: 20px;
-    padding-left: -20px;
-    margin-top:10%;
     animation : flip 3s both;
 }
 
@@ -41,10 +39,7 @@
     text-align: right;
     font-size:40px;
     font-weight : bold;
-    width: 100%;/*
-    align-items: center;
-    margin:35%;*/
-    padding-right: 40px;
+    width: 80%;
     animation: bounceIn 2s;
 }
 @keyframes bounceIn {

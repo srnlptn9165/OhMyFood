@@ -25,10 +25,10 @@
     margin-left: 40px;
     color: black;
 }
-
+/*
 .fa-location-dot:hover {
     color: var(--primary);
-}
+}*/
 
 .fa-location-dot:visited {
     color: black;
@@ -61,97 +61,96 @@ input {          /* Zone de saisie Recherche de lieu */
     width:100%;
   }
 /* ================================================================== */ 
-  .exploration {    
+.exploration {    
     /* Bloc descriptif fond gris très clair */
-      width:100%;                                              
-      background-color: var(--light-grey);
-      text-align: center;
-      padding:30px 0px ;
-  }
-  .exploration h2  {
-      margin: 20px 0px 0px 0px;
-  }
-  
-  .btn-exp {
-      background-color: var(--secondary);   /* For browsers that do not support gradients */
-      background-image: linear-gradient(var(--secondary), var(--primary));
-      color: white;
-      padding: 15px 20px ;
-      margin-top: 20px  ;
-      border: none;
-      box-shadow: 8px 8px 2px var(--grey);
-      cursor:pointer;
-  }
-  .btn:hover {/* -----  changement au survol -----   */
-      background: linear-gradient(170deg, var(--secondary), var(--primary)) 0%;
-      filter: brightness(120%);
-      box-shadow: 8px 8px 2px #ababab;
-      box-shadow: 8px 8px 2px grey;
-  }
+    width:100%;                                              
+    background-color: var(--light-grey);
+    text-align: center;
+    padding:30px 0px ;
+}
+.exploration h2  {
+    margin: 20px 0px 0px 0px;
+}
+.exploration p {
+    margin: 10px;
+}
+.btn-exp {
+    background-color: var(--secondary);   /* For browsers that do not support gradients */
+    background-image: linear-gradient(var(--secondary), var(--primary));
+    color: white;
+    padding: 15px 20px ;
+    margin-top: 20px  ;
+    border: none;
+    box-shadow: 8px 8px 2px var(--grey);
+    cursor:pointer;
+}
+.btn:hover {/* -----  changement au survol -----   */
+    background: linear-gradient(170deg, var(--secondary), var(--primary)) 0%;
+    filter: brightness(120%);
+    box-shadow: 8px 8px 2px #ababab;
+    box-shadow: 8px 8px 2px grey;
+}
 
 
 /* ================================================================== */ 
-.fonctionnement-menu{
+.fonctionnement-menu {
     padding-left:30px;
-  }
-  ol {
-      padding: 0px;
-      counter-reset: fonction;                /* On crée une nouvelle instance du compteur fonction avec chaque ol */                                     list-style-type: none;
-    }
-  ol li::before {
-      counter-increment: fonction;            /* On incrémente uniquement cette
+}
+ol {
+    margin-top: 0px;
+    padding: 0px;
+    counter-reset: fonction;                /* On crée une nouvelle instance du compteur fonction avec chaque ol */                                     list-style-type: none;
+}
+ol li::before {
+    counter-increment: fonction;            /* On incrémente uniquement cette
                                                 instance du compteur */
-      content: counters(fonction,".") " ";    /* On ajoute la valeur de toutes les
+    content: counters(fonction,".") " ";    /* On ajoute la valeur de toutes les
                                                 instances séparées par ".". */
                                              /* Si on doit supporter < IE8 il faudra
                                                 faire attention à ce qu'il n'y ait
                                                 aucun blanc après ',' */
-      border-radius: 35px;
-      background-color: var(--primary);
-      border: none;
-      padding: 5px 8px ;
-      color: white;
-      margin-left: -30px;
-    }
+    border-radius: 35px;
+    background-color: var(--primary);
+    border: none;
+    padding: 5px 8px ;
+    color: white;
+    margin-left: -30px;
+}
   
-  .menu {/
-      width: auto;
-      padding: 10px 10px 10px 15px;
-      margin: 15px;
-      margin-left: 0;
-      border: 1px red;
-      background-color: var(--light-grey);
-      font-weight: bold;
-      box-shadow: 0px 10px 10px var(--grey);
-  }
-  li i {
-      margin-right: 15px;
-      margin-left: 15px;
-  }
+.menu {/
+    width: auto;
+    padding: 10px 10px 10px 15px;
+    margin: 15px;
+    margin-left: 0;
+    border: 1px red;
+    background-color: var(--light-grey);
+    font-weight: bold;
+    box-shadow: 0px 10px 10px var(--grey);
+}
+li i {
+    margin-right: 15px;
+    margin-left: 15px;
+}
 
 
-  .menu:hover { /* -----  changement au survol -----   */
+.menu:hover { /* -----  changement au survol -----   */
     /* zone : changement de couleur du fond */
-      font-weight: bold;
-      background-color: var(--light-secondary);
-  }
+    font-weight: bold;
+    background-color: var(--light-secondary);
+}
   
-  .menu:hover .menu-icon {/*fonctionnement.css*/
-      color:var(--primary);
-  }
+.menu:hover .menu-icon {/*fonctionnement.css*/
+    color:var(--primary);
+}
   
-
 /* ================================================================== */ 
-
-/* ================================================================== */ 
-
 /* Small and Medium devices (portrait tablets and large phones, 600px and landscape tablets, 768px ) */
 
-@media only screen and (min-width: 601px) and (max-width:768px) {
+@media only screen and (min-width: 768px) and (max-width:992px) {
     .responsive {
-      display: flex;
-      flex-direction: row;
-      justify-content:space-between
+        display: flex;
+        flex-direction: row;
+        justify-content:space-around;
     } 
 
     .allexploration {
@@ -165,12 +164,14 @@ input {          /* Zone de saisie Recherche de lieu */
         flex-direction:column;
         flex:50%;
         margin-bottom: 0px;
+        margin-top: 0px;
     } 
     
     .responsive-menu {
         flex-basis:auto;
         display:flex;
         font-size:13px;
+        justify-content: space-around;
     }
     
     li i {
@@ -181,7 +182,7 @@ input {          /* Zone de saisie Recherche de lieu */
   /*  */
   /* Large devices (laptops/desktops, 992px) and Extra large devices (large laptops and desktops, 1200px and up) */
  
-@media only screen and (min-width: 769px)  {
+@media only screen and (min-width: 993px)  {
     .responsive {
        display: flex;
        flex-direction: row;
