@@ -7,8 +7,9 @@
     text-align: center;
     font-size:30px;
     padding: 20px;
+    padding-left: -20px;
     margin-top:10%;
-    animation : flip 2s both;
+    animation : flip 3s both;
 }
 
 @keyframes flip {
@@ -29,7 +30,7 @@
     animation-timing-function: ease-in;
     }
     100% {
-    transform: perspective(200px);
+    transform: perspective(250px);
     animation-timing-function: ease-in;
     }
     } 
@@ -37,13 +38,13 @@
 {
     display: inline-block;
     color: var(--primary);
-    text-align: center;
+    text-align: right;
     font-size:40px;
     font-weight : bold;
-    width: 100%;
+    width: 100%;/*
     align-items: center;
-    margin-top:35%;
-    padding-top: 150px;
+    margin:35%;*/
+    padding-right: 40px;
     animation: bounceIn 2s;
 }
 @keyframes bounceIn {

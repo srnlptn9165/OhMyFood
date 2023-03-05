@@ -95,7 +95,7 @@ a .card-restau:hover{     /*
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    transition: 800ms 0.1s ease-in-out;
+    transition: 800ms  ease-in-out;
 }
 
 .restaurants__cards a:hover .card-restau__place {
