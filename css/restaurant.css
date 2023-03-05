@@ -228,3 +228,21 @@ img.restau-img {
     height: 230px;
     top: -30px;
 }
+@media only screen and (min-width: 601px){
+    .footer--menu {              /* positionnement du footer */
+        position: relative;
+        height: 180px;
+        top: -30px;
+    }
+}
+@media only screen and (min-width: 769px){
+    .menus {
+        display:flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .article--menu {                                                       /* Bloc Article menus */
+        display: flex;
+        flex-direction: column;    
+    }
+}

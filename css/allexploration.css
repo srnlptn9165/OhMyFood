@@ -157,13 +157,14 @@ input {          /* Zone de saisie Recherche de lieu */
     .allexploration {
         flex:50%;
         padding:0px ;
-        padding-bottom:20px;
-    }
+        margin-bottom: 0px;
+      }
     
     .fonctionnement {
         display:flex;
         flex-direction:column;
         flex:50%;
+        margin-bottom: 0px;
     } 
     
     .responsive-menu {
@@ -185,17 +186,20 @@ input {          /* Zone de saisie Recherche de lieu */
        display: flex;
        flex-direction: row;
        justify-content: space-between;
+       padding-bottom: 0px;
+       margin-bottom: 0px;
     } 
     
     .allexploration {
         flex: 50%;
         padding: 0px ;
-        padding-bottom: 20px;
+        padding-bottom: 0px;
     }
     
     .fonctionnement {
         flex: 50%;
-        margin: 0px 0px 10px 0px;
+        margin: 0px 0px 0px 0px;
+        margin-bottom: 0px;
     }
 
     .fonctionnement h2 {

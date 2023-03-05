@@ -76,7 +76,8 @@ footer a:hover {
         font-family: var(--logo);
         font-size: 22px;
         font-weight: 100;
-        padding-bottom: 20px;
+        padding-bottom: 0px;
+        padding-top: 0px;
         text-align: center;
     }
     .footer__liens {
