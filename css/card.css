@@ -8,6 +8,9 @@
     padding-top:0px;         /*
     border: 2px dashed blue;*/
 }
+.restaurants h2{
+    padding-top: 20px;
+}
 .restaurants__cards{
     display: flex;
     flex-direction:column;
@@ -82,11 +85,9 @@ a .card-restau:hover{     /*
 /* ------------------ Coeur ------------------- */
 /* ============================================== */
 
-
 .card-restau__heart .fa-heart {
     color: black;
 }
-
 
 .favorite:hover {
     font-weight: 900;
@@ -94,9 +95,18 @@ a .card-restau:hover{     /*
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    transition: 600ms ease-in-out;
+    transition: 800ms 0.1s ease-in-out;
 }
 
 .restaurants__cards a:hover .card-restau__place {
     color : black;
+}
+@media only screen and (min-width: 769px){
+    .restaurants__cards{
+        display: flex;
+        flex-direction:row;
+        flex-wrap:wrap;
+        justify-content: space-around;
+
+      }
 }
