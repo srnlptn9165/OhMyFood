@@ -58,10 +58,9 @@ img.restau-img {
 }
 
 .deroule {
-    margin-top : 30px;
-    padding-left:10px;
-    margin: 20px 0px 10px 0px;/*
-    border:1px solid red;*/
+    margin-top: 30px;
+    padding-left: 10px;
+    margin: 20px 0px 10px 0px;
     display: flex;
     flex-direction: column;
 }
@@ -71,16 +70,16 @@ img.restau-img {
 }
 
 .deroule .decale{ /* décalage du mot PLAT pour 2 restaurants d'après maquette */
-    padding-left:50px;
+    padding-left: 50px;
 }
 
 .deroule span {
     /* souligne 4 caractères début article menu */
-    padding-bottom :3px;
-    border-bottom :3px solid var(--tertiary);
+    padding-bottom: 3px;
+    border-bottom: 3px solid var(--tertiary);
 }
 
-.article--menu {                                                       /* Bloc Article menus */
+.article--menu {                /* Bloc Article menus */
     display: flex;
     flex-direction: column;   
 }
@@ -106,7 +105,7 @@ img.restau-img {
     animation: bloc-appear 2s 2s backwards; 
 }
 .card-menu:hover > .card-menu__boxtext {/* diminution de la boîte principale au survol => ellipsis */
-    flex:80%;
+    flex: 80%;
 }
 
 .card-menu {  
@@ -115,7 +114,7 @@ img.restau-img {
     box-shadow: 8px 6px 4px var(--grey);
     display: flex;
     flex-direction: row;
-    margin:  6px 10px ;
+    margin:  6px 10px 6px 0px ;
     height: 60px;
     cursor: pointer;
     white-space:nowrap;
@@ -123,7 +122,7 @@ img.restau-img {
     text-overflow:ellipsis;
 }
 
-.card-menu__boxtext{                    /* bloc pour label + commentaire + prix */
+.card-menu__boxtext {                    /* bloc pour label + commentaire + prix */
     margin: 0px;
     padding: 0px;
     display:flex;
@@ -177,7 +176,7 @@ img.restau-img {
     color : white;
 }
 
- .card-menu__boxcheck {                         /* pour le choix du plat */
+ .card-menu__boxcheck {          /* pour le choix du plat */
     flex:0%;
     margin: 0px 0px;
     padding: 0px 0px 10px 0px;
@@ -229,20 +228,14 @@ img.restau-img {
     height: 230px;
     top: -30px;
 }
-@media only screen and (min-width: 601px){
-    .footer--menu {              /* positionnement du footer */
-        position: relative;
-        height: 180px;
-        top: -30px;
-    }
-}
-@media only screen and (min-width: 769px){
+
+@media only screen and (min-width: 992px){
     .menus {
         display:flex;
         flex-direction: row;
         justify-content: space-around;
     }
-    .article--menu {                                                       /* Bloc Article menus */
+    .article--menu {            /* Bloc Article menus */
         display: flex;
         flex-direction: column;    
     }
@@ -255,5 +248,10 @@ img.restau-img {
         border-radius: 20px;
         color : var(--tertiary);
         transform: rotate(360deg);
+    }
+    .footer--menu {              /* positionnement du footer */
+        position: relative;
+        height: 180px;
+        top: -30px;
     }
 }
