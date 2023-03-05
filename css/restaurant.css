@@ -229,7 +229,30 @@ img.restau-img {
     top: -30px;
 }
 
-@media only screen and (min-width: 992px){
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .menus {
+        display:flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .article--menu {            /* Bloc Article menus */
+        display: flex;
+        flex-direction: row; 
+        flex-wrap: wrap;
+    }
+    .card-menu {            /* Bloc Article menus */
+        display: flex;
+        width: 27%;  
+        flex-direction:row;
+    }    
+    .plat .card-menu1 {
+        margin-left: 20px;
+    }
+    .entree .card-menu2 {
+        margin-left: 75px;
+    }
+}
+@media only screen and (min-width: 993px){
     .menus {
         display:flex;
         flex-direction: row;
@@ -238,6 +261,12 @@ img.restau-img {
     .article--menu {            /* Bloc Article menus */
         display: flex;
         flex-direction: column;    
+    }
+
+}
+@media only screen and (min-width: 768px){
+    .deroule .decale{ /* décalage du mot PLAT pour 2 restaurants d'après maquette */
+        padding-left: 00px;
     }
     .card-menu:hover .fa-circle-check {
         position: absolute;
