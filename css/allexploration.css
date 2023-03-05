@@ -1,3 +1,4 @@
+
 /* --- Header */
 .header{
     box-shadow: 0px 9px 0px #ababab;
@@ -33,7 +34,7 @@
     color: black;
 }
 /*attention peut ne pas concerner pas tous les input ! */
-input {                                                                 /* Zone de saisie Recherche de lieu */ 
+input {          /* Zone de saisie Recherche de lieu */ 
     padding: 20px ;
     border: none;
     width: 200px;
@@ -41,43 +42,188 @@ input {                                                                 /* Zone 
     cursor:pointer;
     font-weight: bold;
     }
+/* ================================================================== */ 
+/* Début du bloc responsive */
 
-.exploration {                                                          /* Bloc descriptif fond gris très clair */
-    background-color: var(--light-grey);
-    text-align: center;
-    padding: 30px 50px 30px 50px ;
+.allexploration {
+    display:flex;
+    flex-direction:column;
+    width:100%;
+    padding:0px;
+    margin:0px;
+    text-align:center;
 }
 
-.exploration h2 {
-    margin-top: 20px;
-}
+.fonctionnement {
+    display:flex;
+    flex-direction:column;
+    margin:30px 20px 30px 20px;
+    width:100%;
+  }
+/* ================================================================== */ 
+  .exploration {    
+    /* Bloc descriptif fond gris très clair */
+      width:100%;                                              
+      background-color: var(--light-grey);
+      text-align: center;
+      padding:30px 0px ;
+  }
+  .exploration h2  {
+      margin: 20px 0px 0px 0px;
+  }
+  
+  .btn-exp {
+      background-color: var(--secondary);   /* For browsers that do not support gradients */
+      background-image: linear-gradient(var(--secondary), var(--primary));
+      color: white;
+      padding: 15px 20px ;
+      margin-top: 20px  ;
+      border: none;
+      box-shadow: 8px 8px 2px var(--grey);
+      cursor:pointer;
+  }
+  .btn:hover {/* -----  changement au survol -----   */
+      background: linear-gradient(170deg, var(--secondary), var(--primary)) 0%;
+      filter: brightness(120%);
+      box-shadow: 8px 8px 2px #ababab;
+      box-shadow: 8px 8px 2px grey;
+  }
 
-.btn-exp {
-    background-color: var(--secondary);                                /* For browsers that do not support gradients */
-    background-image: linear-gradient(var(--secondary), var(--primary));
-    color: white;
-    padding: 15px 20px;
-    margin: 20px 0 ;
-    border: none;
-    box-shadow: 8px 8px 2px var(--grey);
-    cursor:pointer;
-}
 
 /* ================================================================== */ 
-/* -----  changement au survol -----   */
+.fonctionnement-menu{
+    padding-left:30px;
+  }
+  ol {
+      padding: 0px;
+      counter-reset: fonction;                /* On crée une nouvelle instance du compteur fonction avec chaque ol */                                     list-style-type: none;
+    }
+  ol li::before {
+      counter-increment: fonction;            /* On incrémente uniquement cette
+                                                instance du compteur */
+      content: counters(fonction,".") " ";    /* On ajoute la valeur de toutes les
+                                                instances séparées par ".". */
+                                             /* Si on doit supporter < IE8 il faudra
+                                                faire attention à ce qu'il n'y ait
+                                                aucun blanc après ',' */
+      border-radius: 35px;
+      background-color: var(--primary);
+      border: none;
+      padding: 5px 8px ;
+      color: white;
+      margin-left: -30px;
+    }
+  
+  .menu {/
+      width: auto;
+      padding: 10px 10px 10px 15px;
+      margin: 15px;
+      margin-left: 0;
+      border: 1px red;
+      background-color: var(--light-grey);
+      font-weight: bold;
+      box-shadow: 0px 10px 10px var(--grey);
+  }
+  li i {
+      margin-right: 15px;
+      margin-left: 15px;
+  }
+
+
+  .menu:hover { /* -----  changement au survol -----   */
+    /* zone : changement de couleur du fond */
+      font-weight: bold;
+      background-color: var(--light-secondary);
+  }
+  
+  .menu:hover .menu-icon {/*fonctionnement.css*/
+      color:var(--primary);
+  }
+  
+
 /* ================================================================== */ 
 
-.btn:hover {
-    background: linear-gradient(170deg, var(--secondary), var(--primary)) 0%;
-    filter: brightness(120%);
-    box-shadow: 8px 8px 2px #ababab;
-    box-shadow: 8px 8px 2px grey;
-}
+/* ================================================================== */ 
 
-/* ============================================== */
-/*   sur desktop    > 992 px : écran d'ordinateur */
-/* ============================================== */
-@media screen and (min-width: 992px)      
-{
+/* Small and Medium devices (portrait tablets and large phones, 600px and landscape tablets, 768px ) */
 
+@media only screen and (min-width: 601px) and (max-width:768px) {
+    .responsive {
+      display: flex;
+      flex-direction: row;
+      justify-content:space-between
+    } 
+
+    .allexploration {
+        flex:50%;
+        padding:0px ;
+        margin-bottom: 0px;
+      }
+    
+    .fonctionnement {
+        display:flex;
+        flex-direction:column;
+        flex:50%;
+        margin-bottom: 0px;
+    } 
+    
+    .responsive-menu {
+        flex-basis:auto;
+        display:flex;
+        font-size:13px;
+    }
+    
+    li i {
+        margin-right: 8px;
+        margin-left: 10px;
+    }
+  }
+  /*  */
+  /* Large devices (laptops/desktops, 992px) and Extra large devices (large laptops and desktops, 1200px and up) */
+ 
+@media only screen and (min-width: 769px)  {
+    .responsive {
+       display: flex;
+       flex-direction: row;
+       justify-content: space-between;
+       padding-bottom: 0px;
+       margin-bottom: 0px;
+    } 
+    
+    .allexploration {
+        flex: 50%;
+        padding: 0px ;
+        padding-bottom: 0px;
+    }
+    
+    .fonctionnement {
+        flex: 50%;
+        margin: 0px 0px 0px 0px;
+        margin-bottom: 0px;
+    }
+
+    .fonctionnement h2 {
+        padding-left: 20px;
+    }
+    
+    .fonctionnement-menu{
+        padding-left:50px;
+    }
+    
+    .menu {
+       width:auto;
+    }
+     
+    .responsive-menu {
+       flex-basis:auto;
+       display:flex;
+       font-size:12px;
+       flex-wrap: wrap;
+       justify-content: space-around;
+    }
+
+    li i {
+       margin-right: 15px;
+       margin-left: 15px;
+    }
 }

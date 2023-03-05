@@ -109,7 +109,8 @@ img.restau-img {
     flex:80%;
 }
 
-.card-menu {                            /* label + commentaire + prix + check */
+.card-menu {  
+    width: 100%;                          /* label + commentaire + prix + check */
     border-radius : 20px;
     box-shadow: 8px 6px 4px var(--grey);
     display: flex;
@@ -227,4 +228,32 @@ img.restau-img {
     position   : relative;
     height: 230px;
     top: -30px;
+}
+@media only screen and (min-width: 601px){
+    .footer--menu {              /* positionnement du footer */
+        position: relative;
+        height: 180px;
+        top: -30px;
+    }
+}
+@media only screen and (min-width: 769px){
+    .menus {
+        display:flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .article--menu {                                                       /* Bloc Article menus */
+        display: flex;
+        flex-direction: column;    
+    }
+    .card-menu:hover .fa-circle-check {
+        position: absolute;
+        font-size:x-large;
+        left:12px;
+        bottom:15px;
+        background-color: white;
+        border-radius: 20px;
+        color : var(--tertiary);
+        transform: rotate(360deg);
+    }
 }
