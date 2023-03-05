@@ -1,4 +1,5 @@
-/* Footer - séparation du bloc précédent */
+
+    /* Footer - séparation du bloc précédent */
 footer {
     background-color: var(--dark-grey);
     padding: 20px ;
@@ -64,8 +65,5 @@ footer a:hover {
     grid-row-start: 4;
 }
 
-/*   > 992 px : écran d'ordinateur */
-@media screen and (min-width: 992px)      
-{
 
-}
+

@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="FR">
     <head>
-        <meta charset="UTF-8">               
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- viewport : si user-scalable=no => impossibilite de zoomer -->
+        <meta charset="UTF-8">       
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <!-- width=device-width définit la largeur de la page pour suivre la largeur d'écran de l'appareil -->
+        <!-- initial-scale=1.0 définit le niveau de zoom initial lorsque la page est chargée pour la première fois par le navigateur -->
+        <!-- viewport : si user-scalable=no => impossibilite de zoomer -->
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
                 <!-- fichiers css du plus generique au plus specifique -->
                 <!-- Polices : Logo et titres: Shrikhand / Texte: Roboto -->
@@ -16,24 +19,22 @@
             <link rel="stylesheet" href="./css/colors.css"> <!-- couleurs demandées pour l'exercice + quelques light  -->
             <link rel="stylesheet" href="./css/font.css">   <!-- caractéristiques des polices utilisées / particularités sur liens <a> -->
             <link rel="stylesheet" href="./css/icon.css">   <!-- taille des icon -->                       
-            <link rel="stylesheet" href="./css/allexploration.css"> <!-- mise en forme de la section Location/Exploration -->
-            <link rel="stylesheet" href="./css/fonctionnement.css"> <!-- mise en forme de la section Fonctionnement -->
+            <link rel="stylesheet" href="./css/allexploration.css"> <!-- mise en forme de la section Location/Exploration --><!--
+            <link rel="stylesheet" href="./css/fonctionnement.css"> --><!-- mise en forme de la section Fonctionnement -->
             <link rel="stylesheet" href="./css/card.css"> <!-- mise en forme des cartes, images et bloc légende -->
             <link rel="stylesheet" href="./css/footer.css"> <!-- mise en forme du pied de page -->
-            <link rel="stylesheet" href="./css/loading.css"> <!-- mise en place d'un load spinner pour faire patienter --> 
-            <link rel="stylesheet" href="./css/media_portable"> <!-- mise en forme pour mobile first -->
+            <link rel="stylesheet" href="./css/loading.css"> <!-- mise en place d'un load spinner pour faire patienter --> <!--
+            <link rel="stylesheet" href="./css/media_portable"> --><!-- mise en forme pour mobile first -->
         <title>OhMyFood</title>
     </head>
 
     <body>
 <!-- pour patienter quelques secondes -->
-    <div class="loading">
-       
-       <span class="spin"></span>
+        <div class="loading">
+            <span class="spin"></span>
             <span class="moment">ONE MOMENT</span>
             <span class="please">PLEASE</span>
-        
-    </div>
+        </div>
 <!-- HEADER -->
         <header class="header">
             <h1 class="header__logo">
@@ -41,61 +42,63 @@
             </h1>      
         </header>
 
-<!-- BLOC 1 -->
-        <section class="allexploration">
 <!-- LOCATION -->
+        <div class="location">
+            <form class="search" >
+                <button class="btn-loc" type="submit">
+                    <i class="fa-solid  fa-location-dot icon--large" ></i>
+                </button>
+                <input type="text" placeholder="Paris, Belleville" name="search" autocomplete="off">     
+            </form>
+        </div>
+
+        <div class="flex-container responsive">
+<!-- BLOC 1 -->
 <!--  Au survol, la couleur de fond des boutons principaux devra légèrement s’éclaircir.
-      L’ombre portée devra également être plus visible.
--->
-            <div class="location">
-                <form class="search" >
-                    <button class="btn-loc" type="submit">
-                        <i class="fa-solid  fa-location-dot icon--large" ></i>
-                    </button>
-                    <input type="text" placeholder="Paris, Belleville" name="search" autocomplete="off">     
-                </form>
-            </div>
-<!-- EXPLORATION -->
-            <div class="exploration">
-                <h2>Réservez le menu qui vous convient</h2>
-                <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-                <input type="button" value="Explorer nos restaurants" class="rounded-btn btn-exp btn" onclick="">            
-            </div>
-        </section>
+      L’ombre portée devra également être plus visible.-->
+            <!-- EXPLORATION -->
+            <section class=" allexploration">
+
+                <div class="exploration">
+                    <h2>Réservez le menu qui vous convient</h2>
+                    <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+                    <input type="button" value="Explorer nos restaurants" class="rounded-btn btn-exp btn" onclick="">
+                </div>
+            </section>
 
 <!-- BLOC2 -->      
 <!-- FONCTIONNEMENT -->
-        <section class="fonctionnement">
-            <h2>Fonctionnement</h2>
-
-            <nav>
-                <ol>
-                    <li class="menu rounded-card ">
-                        <a href="#">
-                            <i class="fa-solid fa-mobile-screen-button icon--x-large menu-icon"></i>
-                            <span class="menu--text">Choisissez un restaurant</span>
-                        </a>
-                    </li>
-                    
-                    
-                    <li class="menu rounded-card ">
-                        <a href="#">
-                            <i class="fa-solid fa-list-ul icon--x-large menu-icon"></i>
-                            Composez votre menu
-                        </a>
-                    </li>
-                    
-                    <li class="menu rounded-card ">
-                        <a href="#">
-                            <i class="fa-solid fa-store icon--x-large menu-icon"></i>
-                            Dégustez au restaurant
-                        </a>
-                    </li>
-                    
-                </ol>
-            </nav>              
-        </section>
-
+            <section class="fonctionnement">
+    
+                <h2>Fonctionnement</h2>
+                <nav class="fonctionnement-menu">
+                    <ol class="responsive-menu">
+                        <li class="menu rounded-card ">
+                            <a href="#">
+                                <i class="fa-solid fa-mobile-screen-button icon--x-large menu-icon"></i>
+                                <span class="menu--text">Choisissez un restaurant</span>
+                            </a>
+                        </li>
+                     
+                        <li class="menu rounded-card ">
+                            <a href="#">
+                                <i class="fa-solid fa-list-ul icon--x-large menu-icon"></i>
+                                <span class="menu--text">Composez votre menu</span>
+                            </a>
+                        </li>
+                     
+                        <li class="menu rounded-card ">
+                            <a href="#">
+                                <i class="fa-solid fa-store icon--x-large menu-icon"></i>
+                                <span class="menu--text">Dégustez au restaurant</span>
+                            </a>
+                        </li>
+                     
+                    </ol>
+                </nav>  
+ 
+            </section>
+        </div>
 
 <!-- BLOC 3 -->
 <!-- RESTAURANTS -->
