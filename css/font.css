@@ -18,7 +18,7 @@ h1 {
     font-family: var(--logo);  
     text-align: center;
     font-size: 30px;
-    color:black;/*
+    color:var(--black);/*
     border: solid 1px red;*/
 }
  
@@ -32,7 +32,7 @@ h2 {
 .reference h2{
     font-family: var(--logo);
     text-align: left;
-    color: black;
+    color: var(--black);
     margin-top: 20px;
     margin-bottom: 10px;   
     font-size: 28px;
@@ -91,7 +91,7 @@ span.capitalize {
 
 a {
     text-decoration: none;/* souligné du lien */
-    color: black;
+    color: var(--black);
 }
 
 

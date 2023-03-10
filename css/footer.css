@@ -3,11 +3,11 @@
 footer {
     background-color: var(--dark-grey);
     padding: 20px ;
-    color: white;
+    color: var(--white);
 }
 
 footer a {
-    color: white;
+    color: var(--white);
 }
 /*
 footer a:hover {
@@ -22,7 +22,7 @@ footer a:hover {
 }
 
 .footer__liens {
-    color: white;
+    color: var(--white);
     display: grid;
     grid-template-columns: 40px 500px;
     grid-template-rows: 30px 30px 30px 30px;
@@ -70,7 +70,7 @@ footer a:hover {
         background-color: var(--dark-grey);
         padding-top: 20px ;
         margin: 0px;
-        color: white;
+        color: var(--white);
     }
     .footer__logo {
         font-family: var(--logo);
@@ -81,7 +81,7 @@ footer a:hover {
         text-align: center;
     }
     .footer__liens {
-        color: white;
+        color: var(--white);
         display: grid;
         grid-template-columns: 5fr 1fr 10fr 10fr;
         grid-template-rows: 30px 30px ;

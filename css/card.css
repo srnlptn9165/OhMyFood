@@ -18,7 +18,7 @@
 
 .card-restau {   
     margin: 20px 0; 
-    background-color: white;                        /* bloc carte restaurant (image + texte + coeur) */
+    background-color: var(--white);                        /* bloc carte restaurant (image + texte + coeur) */
     display: grid;
     grid-template-columns: 1fr repeat(3, 20px);
     grid-template-rows: 1fr repeat(3, 20px);
@@ -86,12 +86,12 @@ a .card-restau:hover{     /*
 /* ============================================== */
 
 .card-restau__heart .fa-heart {
-    color: black;
+    color: var(--black);
 }
 
 .favorite:hover {
     font-weight: 900;
-    background: radial-gradient(circle at 33% 100%, var(--secondary) , var(--primary) );
+    background: radial-gradient( var(--secondary) , var(--primary) );
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -99,7 +99,7 @@ a .card-restau:hover{     /*
 }
 
 .restaurants__cards a:hover .card-restau__place {
-    color : black;
+    color : var(--black);
 }
 @media only screen and (min-width: 769px){
     .restaurants__cards {

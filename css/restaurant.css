@@ -173,7 +173,7 @@ img.restau-img {
     background-color: var(--tertiary);
     justify-content: center;
     align-items: flex-end;
-    color : white;
+    color : var(--white);
 }
 
  .card-menu__boxcheck {          /* pour le choix du plat */
@@ -182,7 +182,7 @@ img.restau-img {
     padding: 0px 0px 10px 0px;
     justify-content: center;
     align-items: flex-end;
-    color: white;    
+    color: var(--white);    
     transform:translateX(2vw);
     transition-property: transform;
     transition-duration: 1s;
@@ -194,7 +194,7 @@ img.restau-img {
     font-size:xx-large;
     left:20px;
     bottom:10px;
-    background-color: white;
+    background-color: var(--white);
     border-radius: 20px;
     color : var(--tertiary);
     transform: rotate(360deg);

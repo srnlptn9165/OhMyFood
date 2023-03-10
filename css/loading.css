@@ -106,7 +106,6 @@
 {
     content : "";
     display: block;
-    border: dashed 1px blue;
     position: absolute;
     /* --------------------------------------------------------- */    
     top: 50%;                                                    /* pour centrer */

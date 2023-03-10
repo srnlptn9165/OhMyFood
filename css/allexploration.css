@@ -1,7 +1,7 @@
 
 /* --- Header */
 .header{
-    box-shadow: 0px 9px 0px #ababab;
+    box-shadow: 0px 9px 0px var(--shadow);
 }
 /*  -----------   Localisation  ------------------      */
 
@@ -23,7 +23,7 @@
 
 .fa-location-dot {                                                      /* icon localisation                  */
     margin-left: 40px;
-    color: black;
+    color: var(--black);
 }
 /*
 .fa-location-dot:hover {
@@ -31,7 +31,7 @@
 }*/
 
 .fa-location-dot:visited {
-    color: black;
+    color: var(--black);
 }
 /*attention peut ne pas concerner pas tous les input ! */
 input {          /* Zone de saisie Recherche de lieu */ 
@@ -87,8 +87,7 @@ input {          /* Zone de saisie Recherche de lieu */
 .btn:hover {/* -----  changement au survol -----   */
     background: linear-gradient(170deg, var(--secondary), var(--primary)) 0%;
     filter: brightness(120%);
-    box-shadow: 8px 8px 2px #ababab;
-    box-shadow: 8px 8px 2px grey;
+    box-shadow: 8px 8px 2px var(--shadow);
 }
 
 
@@ -113,16 +112,15 @@ ol li::before {
     background-color: var(--primary);
     border: none;
     padding: 5px 8px ;
-    color: white;
+    color: var(--white);
     margin-left: -30px;
 }
   
-.menu {/
+.menu {
     width: auto;
     padding: 10px 10px 10px 15px;
     margin: 15px;
     margin-left: 0;
-    border: 1px red;
     background-color: var(--light-grey);
     font-weight: bold;
     box-shadow: 0px 10px 10px var(--grey);
@@ -139,7 +137,7 @@ li i {
     background-color: var(--light-secondary);
 }
   
-.menu:hover .menu-icon {/*fonctionnement.css*/
+.menu:hover .menu-icon {
     color:var(--primary);
 }
   
