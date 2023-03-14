@@ -52,9 +52,16 @@ a .card-restau:hover{     /*
     right           : 30px;
     height          : 30px;
     font-weight     : bold;
-    padding         : 10px;
+    padding         : 6px 10px 0px 10px;
+    margin          : 0px;
     background-color: var(--tertiary);
     color           : var(--dark-tertiary);
+    border-radius   : 4px;
+}
+
+span .new {
+    display : block;
+    border : 1px solid black;
 }
 
 .card-restau__place {                                    /* bloc comprenant le label + le lieu */
