@@ -24,7 +24,7 @@ footer a:hover {
 .footer__liens {
     color: var(--white);
     display: grid;
-    grid-template-columns: 40px 500px;
+    grid-template-columns: 40px 200px;
     grid-template-rows: 30px 30px 30px 30px;
 }
 

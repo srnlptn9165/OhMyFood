@@ -63,6 +63,7 @@ img.restau-img {
     margin: 20px 0px 10px 0px;
     display: flex;
     flex-direction: column;
+    width:100px;
 }
 .deroule h3 {
     padding: 0px;
@@ -86,7 +87,7 @@ img.restau-img {
 
 @keyframes bloc-appear {
     from {
-        transform:translateY(-100%);
+        transform:translateY(100%);
         opacity: 0;
     }
     to {
@@ -220,6 +221,8 @@ img.restau-img {
     top:30px;
     left: 50%;
     transform: translate(-50%,-50%);
+    display:flex;
+    justify-content: center;
  }
  
 /* ---------------------------------------- */
@@ -246,10 +249,10 @@ img.restau-img {
         flex-direction:row;
     }    
     .plat .card-menu1 {
-        margin-left: 20px;
+        margin-left: 0px;
     }
     .entree .card-menu2 {
-        margin-left: 75px;
+        margin-left: 100px;
     }
 }
 @media only screen and (min-width: 993px){
