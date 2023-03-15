@@ -265,6 +265,7 @@ img.restau-img {
         color : var(--tertiary);
         transform: rotate(360deg);
     }
+
     .plat .card-menu1 {
         margin-left: 0px;
     }
@@ -273,6 +274,17 @@ img.restau-img {
     }
 }
 
+/* pour tablet et desktop */
+@media only screen and (min-width: 768px){
+    .deroule .decale{ /* décalage du mot PLAT pour 2 restaurants d'après maquette */
+        padding-left: 00px;
+    }
+    .footer--menu {              /* positionnement du footer */
+        position: relative;
+        height: 180px;
+        top: -30px;
+    }
+}
 /* pour desktop uniquement */
 @media only screen and (min-width: 993px){
     .menus {
@@ -295,34 +307,11 @@ img.restau-img {
     .card-menu:hover .fa-circle-check {
         position: absolute;
         font-size:x-large;
-        left:2px;
+        right:10px;
         bottom:15px;
         background-color: white;
         border-radius: 20px;
         color : var(--tertiary);
         transform: rotate(360deg);
-    }
-}
-
-/* pour tablet et desktop */
-@media only screen and (min-width: 768px){
-    .deroule .decale{ /* décalage du mot PLAT pour 2 restaurants d'après maquette */
-        padding-left: 00px;
-    }
-    .card-menu:hover .fa-circle-check {
-        position: absolute;
-        font-size:x-large;
-        right:1.5vw;
-        bottom:15px;
-        background-color: white;
-        border-radius: 20px;
-        color : var(--tertiary);
-        transform: rotate(360deg);
-    }
-
-    .footer--menu {              /* positionnement du footer */
-        position: relative;
-        height: 180px;
-        top: -30px;
     }
 }
