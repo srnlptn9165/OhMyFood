@@ -121,6 +121,7 @@ img.restau-img {
     white-space:nowrap;
     overflow:hidden;
     text-overflow:ellipsis;
+    transition:all 1s;
 }
 
 .card-menu__boxtext {                    /* bloc pour label + commentaire + prix */
@@ -131,6 +132,7 @@ img.restau-img {
     white-space: nowrap;
     overflow: hidden;
     text-overflow:ellipsis;
+    transition:all 1s;
 }
 
 .card-menu__label {                         /* label du plat */
@@ -159,32 +161,24 @@ img.restau-img {
 
 .card-menu__prix {                          /* prix du plat */
     margin: 0px 0px;
-    padding : 5px 0px 10px 0px;
+    padding : 5px 5px 10px 0px;
     display: flex;
     flex-direction : row;
     justify-content: center;
     align-items: flex-end;
     transition-property: transform;
     transition-duration: 1s;
+    transition:all 1s;
  }
-@keyframes translateX0 {
-    from {
-        flex:0%;
-    }
-    to {
-        flex:20%;
-        transform: translateX(0px) 2s 2 alternate backwards;
-    }
-}
 
 .card-menu:hover > .card-menu__boxcheck {        /* apparition du bloc vert du choix */
-    flex:25%;
+    flex:20%;
     transform: translateX(0px);
     background-color: var(--tertiary);
     justify-content: center;
     align-items: flex-end;
     color : var(--white);
-    animation: translateX0 2s 2 alternate backwards;
+    transition:all 1s;
 }
 
  .card-menu__boxcheck {          /* pour le choix du plat */
@@ -198,17 +192,18 @@ img.restau-img {
     transition-property: transform;
     transition-duration: 1s;
     transition-timing-function: ease-in-out;
+    transition:all 1s;
 }
 
 .card-menu:hover .fa-circle-check {
     position: absolute;
     font-size:xx-large;
-    left:25px;
+    right:6vw;
     bottom:10px;
     background-color: var(--white);
     border-radius: 20px;
     color : var(--tertiary);
-    transform: rotate(360deg) alternate both;
+    transform: rotate(360deg)  ;
 }
 
 
@@ -285,13 +280,16 @@ img.restau-img {
     .card-menu:hover .fa-circle-check {
         position: absolute;
         font-size:x-large;
-        left:12px;
+        right:1.5vw;
         bottom:15px;
         background-color: white;
         border-radius: 20px;
         color : var(--tertiary);
         transform: rotate(360deg);
     }
+
+
+
     .footer--menu {              /* positionnement du footer */
         position: relative;
         height: 180px;
