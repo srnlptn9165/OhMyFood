@@ -110,7 +110,7 @@ img.restau-img {
 }
 
 .card-menu {  
-    width: 100%;                          /* label + commentaire + prix + check */
+    width: 95%;                          /* label + commentaire + prix + check */
     border-radius : 20px;
     box-shadow: 8px 6px 4px var(--grey);
     display: flex;
@@ -159,7 +159,7 @@ img.restau-img {
 
 .card-menu__prix {                          /* prix du plat */
     margin: 0px 0px;
-    padding : 5px 20px 10px 0px;
+    padding : 5px 0px 10px 0px;
     display: flex;
     flex-direction : row;
     justify-content: center;
@@ -167,39 +167,50 @@ img.restau-img {
     transition-property: transform;
     transition-duration: 1s;
  }
+@keyframes translateX0 {
+    from {
+        flex:0%;
+    }
+    to {
+        flex:20%;
+        transform: translateX(0px) 2s 2 alternate backwards;
+    }
+}
 
 .card-menu:hover > .card-menu__boxcheck {        /* apparition du bloc vert du choix */
-    flex:20%;
+    flex:25%;
     transform: translateX(0px);
     background-color: var(--tertiary);
     justify-content: center;
     align-items: flex-end;
     color : var(--white);
+    animation: translateX0 2s 2 alternate backwards;
 }
 
  .card-menu__boxcheck {          /* pour le choix du plat */
     flex:0%;
     margin: 0px 0px;
-    padding: 0px 0px 10px 0px;
+    padding: 0px 8px 12px 0px;
     justify-content: center;
     align-items: flex-end;
     color: var(--white);    
     transform:translateX(2vw);
     transition-property: transform;
     transition-duration: 1s;
-    transition-timing-function: ease;
+    transition-timing-function: ease-in-out;
 }
 
 .card-menu:hover .fa-circle-check {
     position: absolute;
     font-size:xx-large;
-    left:20px;
+    left:25px;
     bottom:10px;
     background-color: var(--white);
     border-radius: 20px;
     color : var(--tertiary);
-    transform: rotate(360deg);
+    transform: rotate(360deg) alternate both;
 }
+
 
 .card-menu__boxcheck  .fa-circle-check {
     font-size:xx-small;
@@ -207,7 +218,7 @@ img.restau-img {
     padding:0px;
     transition:transform ;
     transition-duration : 2s;
-    transition-delay:0.1s;
+    transition-delay:0s;
   }
 
  /* ---------------------------------------- */
